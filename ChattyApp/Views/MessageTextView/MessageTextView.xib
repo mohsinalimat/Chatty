@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageTextView" customModule="ChattyApp" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="containerView" destination="EX9-24-KIq" id="gsY-Oa-FKg"/>
+                <outlet property="sendButton" destination="WqU-uA-Eok" id="WrU-SU-3f2"/>
+                <outlet property="textView" destination="mRO-05-fQy" id="SyX-Dy-SyV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EX9-24-KIq" customClass="RoundedView" customModule="ChattyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mRO-05-fQy" customClass="TextView" customModule="ChattyApp" customModuleProvider="target">
+                    <rect key="frame" x="12" y="5" width="354" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Type message here..."/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqU-uA-Eok">
+                    <rect key="frame" x="374" y="8" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WqU-uA-Eok" secondAttribute="height" multiplier="1:1" id="Ju8-cj-mpb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" name="PrimaryThemeColor"/>
+                    <state key="normal" image="arrow.up.circle.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" weight="semibold">
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        </preferredSymbolConfiguration>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="QTd-hq-eBQ"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mRO-05-fQy" firstAttribute="top" secondItem="EX9-24-KIq" secondAttribute="top" constant="5" id="IIf-FE-O1U"/>
+                <constraint firstItem="mRO-05-fQy" firstAttribute="leading" secondItem="EX9-24-KIq" secondAttribute="leading" constant="12" id="LZs-PD-Yv0"/>
+                <constraint firstItem="QTd-hq-eBQ" firstAttribute="bottom" secondItem="WqU-uA-Eok" secondAttribute="bottom" constant="8" id="Q9m-dQ-KQj"/>
+                <constraint firstAttribute="trailing" secondItem="WqU-uA-Eok" secondAttribute="trailing" constant="8" id="TyT-Pp-yIx"/>
+                <constraint firstItem="WqU-uA-Eok" firstAttribute="leading" secondItem="mRO-05-fQy" secondAttribute="trailing" constant="8" id="fMM-Rj-mCR"/>
+                <constraint firstAttribute="bottom" secondItem="mRO-05-fQy" secondAttribute="bottom" constant="5" id="pYw-GL-etY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-181.15942028985509" y="281.91964285714283"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="mRO-05-fQy">
+            <size key="intrinsicContentSize" width="10" height="37.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="PrimaryThemeColor">
+            <color red="0.29100000858306885" green="0.48399999737739563" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

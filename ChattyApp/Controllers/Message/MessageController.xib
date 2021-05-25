@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageController" customModule="ChattyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="messageBar" destination="xEF-xc-NbK" id="jFc-5L-KzW"/>
+                <outlet property="messageTextView" destination="AqT-Tz-84M" id="mtN-os-Vzj"/>
+                <outlet property="tableView" destination="hyh-GK-okI" id="yMt-cC-gIT"/>
+                <outlet property="textViewBottomAnchor" destination="X1d-vj-kK2" id="d0t-92-wNy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEF-xc-NbK">
+                    <rect key="frame" x="0.0" y="790" width="414" height="106"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxH-rm-4Zc">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.5"/>
+                            <color key="backgroundColor" systemColor="separatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.29999999999999999" id="2EU-hJ-ghe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqT-Tz-84M" customClass="MessageTextView" customModule="ChattyApp" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8.5" width="398" height="47.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mxH-rm-4Zc" firstAttribute="leading" secondItem="xEF-xc-NbK" secondAttribute="leading" id="1yW-y0-0YW"/>
+                        <constraint firstItem="AqT-Tz-84M" firstAttribute="top" secondItem="mxH-rm-4Zc" secondAttribute="bottom" constant="8" id="2J7-Kf-znG"/>
+                        <constraint firstItem="AqT-Tz-84M" firstAttribute="leading" secondItem="xEF-xc-NbK" secondAttribute="leading" constant="8" id="925-BC-hE2"/>
+                        <constraint firstItem="AqT-Tz-84M" firstAttribute="centerX" secondItem="xEF-xc-NbK" secondAttribute="centerX" id="AhR-3d-ot6"/>
+                        <constraint firstAttribute="trailing" secondItem="mxH-rm-4Zc" secondAttribute="trailing" id="RmD-An-QUt"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="AqT-Tz-84M" secondAttribute="bottom" constant="8" id="X1d-vj-kK2"/>
+                        <constraint firstItem="mxH-rm-4Zc" firstAttribute="top" secondItem="xEF-xc-NbK" secondAttribute="top" id="ejc-rS-7Hu"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-GK-okI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="790"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hyh-GK-okI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ECP-Is-bii"/>
+                <constraint firstAttribute="bottom" secondItem="xEF-xc-NbK" secondAttribute="bottom" id="G6j-vp-hd1"/>
+                <constraint firstItem="hyh-GK-okI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HgS-6A-Yh1"/>
+                <constraint firstItem="xEF-xc-NbK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PTP-bC-g44"/>
+                <constraint firstItem="xEF-xc-NbK" firstAttribute="top" secondItem="hyh-GK-okI" secondAttribute="bottom" id="QV3-2m-BDi"/>
+                <constraint firstItem="hyh-GK-okI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="e15-S6-hrK"/>
+                <constraint firstItem="xEF-xc-NbK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eyO-Wc-8Ob"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

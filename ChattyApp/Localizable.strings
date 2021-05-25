@@ -1,0 +1,16 @@
+/* 
+ Localizable.strings
+  ChattyApp
+
+  Created by Kristopher Jackson on 5/22/21.
+  
+*/
+
+/*********************
+
+ - Headers
+
+ *********************/
+
+"MISSION_HEADER" = "Explore the\npotential of a\nmessaging app";
+//"MISSION_HEADER" = "Explore the\npotential of a\nsimple message.";

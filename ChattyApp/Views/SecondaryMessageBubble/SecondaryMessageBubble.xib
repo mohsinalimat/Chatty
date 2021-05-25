@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondaryMessageBubble" rowHeight="120" id="nnC-4u-K5R" customClass="SecondaryMessageBubble" customModule="ChattyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nnC-4u-K5R" id="lpB-R0-9Yd">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMm-fw-ePG" customClass="RoundedView" customModule="Exchange" customModuleProvider="target">
+                        <rect key="frame" x="312" y="12" width="90" height="77.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht8-VN-Tog">
+                                <rect key="frame" x="69" y="56.5" width="21" height="21"/>
+                                <color key="backgroundColor" name="PrimaryThemeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Oew-o3-gms"/>
+                                    <constraint firstAttribute="width" constant="21" id="xQe-hI-U7Z"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="[TEXT]" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRK-lu-O12" customClass="RoundedTextView" customModule="Exchange" customModuleProvider="target">
+                                <rect key="frame" x="8" y="3" width="74" height="71.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="PrimaryThemeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="8vw-C2-7zM"/>
+                            <constraint firstAttribute="bottom" secondItem="Ht8-VN-Tog" secondAttribute="bottom" id="HCx-Un-bae"/>
+                            <constraint firstAttribute="trailing" secondItem="Ht8-VN-Tog" secondAttribute="trailing" id="Llm-Ks-a3y"/>
+                            <constraint firstItem="XRK-lu-O12" firstAttribute="top" secondItem="oMm-fw-ePG" secondAttribute="top" constant="3" id="Yqr-8Q-eDY"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="278" id="cIB-qa-nrn"/>
+                            <constraint firstItem="XRK-lu-O12" firstAttribute="leading" secondItem="oMm-fw-ePG" secondAttribute="leading" constant="8" id="pEK-Eh-AAu"/>
+                            <constraint firstAttribute="bottom" secondItem="XRK-lu-O12" secondAttribute="bottom" constant="3" id="s4g-C6-qEg"/>
+                            <constraint firstItem="XRK-lu-O12" firstAttribute="centerX" secondItem="oMm-fw-ePG" secondAttribute="centerX" id="uBI-ec-xxh"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="21"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8S-zo-11J">
+                        <rect key="frame" x="368.5" y="97.5" width="25.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="I8S-zo-11J" secondAttribute="bottom" constant="8" id="0jg-Jb-2Sc"/>
+                    <constraint firstItem="oMm-fw-ePG" firstAttribute="trailing" secondItem="I8S-zo-11J" secondAttribute="trailing" constant="8" id="9EY-wx-K5E"/>
+                    <constraint firstItem="I8S-zo-11J" firstAttribute="top" secondItem="oMm-fw-ePG" secondAttribute="bottom" constant="8" id="IVg-7T-KH6"/>
+                    <constraint firstAttribute="trailing" secondItem="oMm-fw-ePG" secondAttribute="trailing" constant="12" id="YB3-T7-SAE"/>
+                    <constraint firstItem="oMm-fw-ePG" firstAttribute="top" secondItem="lpB-R0-9Yd" secondAttribute="top" constant="12" id="aHt-uZ-SzV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="I8S-zo-11J" id="fQf-QI-MDl"/>
+                <outlet property="textView" destination="XRK-lu-O12" id="qnu-4m-Mhf"/>
+            </connections>
+            <point key="canvasLocation" x="-439.13043478260875" y="257.8125"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="XRK-lu-O12">
+            <size key="intrinsicContentSize" width="74" height="40"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="PrimaryThemeColor">
+            <color red="0.29100000858306885" green="0.48399999737739563" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
