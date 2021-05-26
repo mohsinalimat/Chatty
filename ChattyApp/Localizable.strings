@@ -14,3 +14,14 @@
 
 "MISSION_HEADER" = "Explore the\npotential of a\nmessaging app";
 //"MISSION_HEADER" = "Explore the\npotential of a\nsimple message.";
+
+
+/*********************
+
+ - Errors
+
+ *********************/
+
+"PHONE_NUMBER_FIELD_EMPTY_ERROR" = "A phone number is required to create your account.";
+
+"USER_EXISTS_ERROR" = "The phone number provided is already being used by another account.";

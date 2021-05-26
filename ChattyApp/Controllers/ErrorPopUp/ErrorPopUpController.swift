@@ -16,7 +16,6 @@ class ErrorPopUpController: UIViewController {
     
     convenience init() {
         self.init(nibName: String(describing: ErrorPopUpController.self), bundle: nil)
-        self.message = message
     }
     
     convenience init(withMessage message: String) {

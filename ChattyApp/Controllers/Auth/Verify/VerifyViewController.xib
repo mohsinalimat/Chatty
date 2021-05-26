@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="primaryButtonBottomAnchor" destination="hBC-qg-N7n" id="O5l-ld-8cZ"/>
                 <outlet property="primaryLabel" destination="rJS-5Q-75U" id="iMH-nz-zwK"/>
+                <outlet property="secondaryLabel" destination="o3Q-Yv-zaT" id="MEa-2K-yge"/>
                 <outlet property="textField" destination="Kog-Ym-d50" id="qkY-5S-N4h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,13 +29,13 @@
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We sent a six digit code to your phone number. Enter the code below to log in." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="o3Q-Yv-zaT">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We sent a six digit code to your phone number." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="o3Q-Yv-zaT">
                     <rect key="frame" x="50" y="66.5" width="314" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-Ym-d50" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-Ym-d50" customClass="VerifyTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="139.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -55,6 +56,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="primaryButtonTapped:" destination="-1" eventType="touchUpInside" id="2ey-dZ-ODa"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

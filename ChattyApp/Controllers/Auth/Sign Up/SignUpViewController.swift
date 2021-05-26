@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 protocol SignUpNavigationDelegate {
     func navigate(from signUpViewController: SignUpViewController, to verifyViewController: VerifyViewController)
@@ -57,19 +56,43 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
-            DispatchQueue.main.async {
-                if let error = error {
-                    self.showError(withMessage: error.localizedDescription)
-                    return
-                }
-                /// Save the verification ID and phone number on the device
-                UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
-                UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
-                
-                self.navigationDelegate?.navigate(from: self, to: VerifyViewController())
+        User.doesUserExist(whereField: .phoneNumber, isEqualTo: phoneNumber) { exists, error in
+            if let error = error {
+                self.showError(withMessage: error.localizedDescription)
+                return
             }
+            
+            guard let exists = exists else {
+                self.showError()
+                return
+            }
+            
+            if exists {
+                self.showError(withMessage: USER_EXISTS_ERROR)
+                return
+            }
+            
+            Authenticator().verify(phoneNumber: phoneNumber) { (verificationID, error) in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self.showError(withMessage: error.localizedDescription)
+                        return
+                    }
+                    
+                    guard let verificationID = verificationID else {
+                        return
+                    }
+                    
+                    /// Save the verification ID and phone number on the device
+                    UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
+                    UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+                    
+                    self.navigationDelegate?.navigate(from: self, to: VerifyViewController(phoneNumber: phoneNumber, verificationID: verificationID))
+                }
+            }
+            
         }
+        
     }
     
     
@@ -104,11 +127,6 @@ class SignUpViewController: UIViewController {
             self.primaryButtonBottomAnchor.constant = 8
             self.view.layoutSubviews()
         }
-    }
-    
-    
-    private func showError(withMessage message: String) {
-        self.present(ErrorPopUpController(withMessage: message), animated: true, completion: nil)
     }
 
     

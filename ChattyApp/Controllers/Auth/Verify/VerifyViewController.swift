@@ -10,12 +10,37 @@ import UIKit
 class VerifyViewController: UIViewController {
 
     @IBOutlet weak var primaryLabel: UILabel!
+    @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var textField: MaterialTextField!
     @IBOutlet weak var primaryButtonBottomAnchor: NSLayoutConstraint!
     
     
+    var phoneNumber: String?
+    var verificationID: String?
+    
+    
     convenience init() {
         self.init(nibName: String(describing: VerifyViewController.self), bundle: nil)
+        self.getDataFromDisk()
+    }
+    
+    
+    convenience init(phoneNumber: String, verificationID: String) {
+        self.init(nibName: String(describing: VerifyViewController.self), bundle: nil)
+        self.phoneNumber = phoneNumber
+        self.verificationID = verificationID
+    }
+    
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.getDataFromDisk()
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.getDataFromDisk()
     }
     
     
@@ -23,6 +48,15 @@ class VerifyViewController: UIViewController {
         super.viewDidLoad()
         
         self.formatHeaderLabel()
+
+        if let phoneNumber = self.phoneNumber {
+            self.secondaryLabel.attributedText = NSMutableAttributedString()
+                .append("We sent a six digit code to\n", withFont: .systemFont(ofSize: 18))
+                .append(phoneNumber, withFont: .systemFont(ofSize: 18, weight: .semibold))
+        }
+        
+        self.textField.textField.keyboardType = .numberPad
+        self.textField.textField.textContentType = .oneTimeCode
         
         NotificationCenter.default
             .addObserver(self, selector: #selector(self.keyboardWillShow(notification:)),
@@ -32,14 +66,69 @@ class VerifyViewController: UIViewController {
                          name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.textField.textField.becomeFirstResponder()
     }
     
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.view.endEditing(true)
+    }
+    
+    
+    @IBAction func primaryButtonTapped(_ sender: Any) {
+        
+        guard let verificationID = self.verificationID else {
+            self.showError(withMessage: "Developer error.")
+            return
+        }
+        
+        let verificationCode = self.textField.textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if verificationCode.isEmpty {
+            self.showError(withMessage: "Verification code is required.")
+            return
+        }
+        
+        Authenticator().signIn(withVerificationID: verificationID, verificationCode: verificationCode) { authResult, error in
+            DispatchQueue.main.async {
+                
+                if let error = error {
+                    (error.code == 17044) ? self.showError(withMessage: "Verification code is not valid.")
+                        : self.showError(withMessage: error.localizedDescription)
+                }
+                
+                guard let authResult = authResult,let phoneNumber = self.phoneNumber else {
+                    self.showError()
+                    CurrentUser.signOut(completion: nil)
+                    return
+                }
+                
+                User(withID: authResult.user.uid).setData([
+                
+                    .phoneNumber: phoneNumber,
+                    .userID: authResult.user.uid,
+                    .created: (authResult.user.metadata.creationDate ?? Date()).toFirebaseTimestamp(),
+                    
+                ]) { error in
+                    
+                    if let error = error {
+                        self.showError(withMessage: error.localizedDescription)
+                        return
+                    }
+                    
+                    
+                    // MARK: Fix this. Should get rest of data.
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }
+                
+
+            }
+        }
+        
     }
     
     
@@ -71,6 +160,13 @@ class VerifyViewController: UIViewController {
         }
     }
     
+    
+    private func getDataFromDisk() {
+        self.phoneNumber = UserDefaults.standard.object(forKey: "phoneNumber") as? String
+        self.verificationID = UserDefaults.standard.object(forKey: "authVerificationID") as? String
+    }
+    
+    
     private func formatHeaderLabel() {
         let font: UIFont = .systemFont(ofSize: 34, weight: .black)
         self.primaryLabel.attributedText = NSMutableAttributedString()
@@ -78,4 +174,5 @@ class VerifyViewController: UIViewController {
             .append(".", withFont: font, withColor: #colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1))
     }
 
+    
 }
