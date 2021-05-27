@@ -9,15 +9,22 @@ import UIKit
 
 class AuthNavigationController: UINavigationController {
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    convenience init() {
         let openingViewController = OpeningViewController()
-        super.init(rootViewController: openingViewController)
+        self.init(rootViewController: openingViewController)
         openingViewController.navigationDelegate = self
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setViewControllers([OpeningViewController()], animated: true)
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+        (rootViewController as? OpeningViewController)?.navigationDelegate = self
+        (rootViewController as? GetNameViewController)?.navigationDelegate = self
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        let openingViewController = OpeningViewController()
+        self.init(rootViewController: openingViewController)
+        openingViewController.navigationDelegate = self
     }
     
     override func viewDidLoad() {
@@ -26,8 +33,10 @@ class AuthNavigationController: UINavigationController {
         self.navigationBar.tintColor = #colorLiteral(red: 0.2193171084, green: 0.4901946187, blue: 1, alpha: 1)
         self.view.backgroundColor = .white
         self.navigationBar.isTranslucent = false
+        self.navigationBar.shadowImage = UIImage()
         
     }
+    
 }
 
 
@@ -73,6 +82,7 @@ extension AuthNavigationController: LogInNavigationDelegate {
 extension AuthNavigationController: SignUpNavigationDelegate {
     
     func navigate(from signUpViewController: SignUpViewController, to verifyViewController: VerifyViewController) {
+        verifyViewController.navigationDelegate = self
         self.pushViewController(verifyViewController, animated: true)
     }
     
@@ -89,3 +99,26 @@ extension AuthNavigationController: SignUpNavigationDelegate {
 }
 
 
+// MARK: - DELEGATE: Verify Navigation Delegate
+
+
+extension AuthNavigationController: VerifyNavigationDelegate {
+    
+    func navigate(from verifyViewController: VerifyViewController, to getNameViewController: GetNameViewController) {
+        getNameViewController.navigationDelegate = self
+        self.pushViewController(getNameViewController, animated: true)
+    }
+    
+}
+
+
+// MARK: - DELEGATE: Get Name Navigation Delegate
+
+
+extension AuthNavigationController: GetNameNavigationDelegate {
+    
+    func dismiss(from getNameViewController: GetNameViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+}

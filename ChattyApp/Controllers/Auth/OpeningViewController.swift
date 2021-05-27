@@ -26,9 +26,6 @@ class OpeningViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Removes bottom border below Navigation Bar
-        self.navigationController?.navigationBar.shadowImage = UIImage()
 
         self.formatLogoInNavBar()
         

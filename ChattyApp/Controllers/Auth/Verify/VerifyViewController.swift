@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol VerifyNavigationDelegate {
+    func navigate(from verifyViewController: VerifyViewController, to getNameViewController: GetNameViewController)
+}
+
 class VerifyViewController: UIViewController {
 
     @IBOutlet weak var primaryLabel: UILabel!
@@ -17,6 +21,7 @@ class VerifyViewController: UIViewController {
     
     var phoneNumber: String?
     var verificationID: String?
+    var navigationDelegate: VerifyNavigationDelegate?
     
     
     convenience init() {
@@ -82,13 +87,13 @@ class VerifyViewController: UIViewController {
     @IBAction func primaryButtonTapped(_ sender: Any) {
         
         guard let verificationID = self.verificationID else {
-            self.showError(withMessage: "Developer error.")
+            self.presentError(withMessage: "Developer error.")
             return
         }
         
         let verificationCode = self.textField.textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         if verificationCode.isEmpty {
-            self.showError(withMessage: "Verification code is required.")
+            self.presentError(withMessage: "Verification code is required.")
             return
         }
         
@@ -96,12 +101,12 @@ class VerifyViewController: UIViewController {
             DispatchQueue.main.async {
                 
                 if let error = error {
-                    (error.code == 17044) ? self.showError(withMessage: "Verification code is not valid.")
-                        : self.showError(withMessage: error.localizedDescription)
+                    (error.code == 17044) ? self.presentError(withMessage: "Verification code is not valid.")
+                        : self.presentError(withMessage: error.localizedDescription)
                 }
                 
                 guard let authResult = authResult,let phoneNumber = self.phoneNumber else {
-                    self.showError()
+                    self.presentError()
                     CurrentUser.signOut(completion: nil)
                     return
                 }
@@ -115,13 +120,11 @@ class VerifyViewController: UIViewController {
                 ]) { error in
                     
                     if let error = error {
-                        self.showError(withMessage: error.localizedDescription)
+                        self.presentError(withMessage: error.localizedDescription)
                         return
                     }
                     
-                    
-                    // MARK: Fix this. Should get rest of data.
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationDelegate?.navigate(from: self, to: GetNameViewController())
                     
                 }
                 

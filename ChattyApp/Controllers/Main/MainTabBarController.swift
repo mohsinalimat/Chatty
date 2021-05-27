@@ -29,10 +29,22 @@ class MainTabBarController: UITabBarController {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user == nil {
                 
-                let viewController = AuthNavigationController(nibName: nil, bundle: nil)
+                let viewController = AuthNavigationController()
                 viewController.modalTransitionStyle = .crossDissolve
                 viewController.modalPresentationStyle = .fullScreen
                 self.present(viewController, animated: true, completion: nil)
+                
+            } else {
+                
+                // If display name is not set, assume there
+                // was an interuption in the sign up process.
+                // Should finish gathering user info.
+                if CurrentUser.displayName == nil {
+                    let viewController = GetNameViewController()
+                    viewController.modalTransitionStyle = .crossDissolve
+                    viewController.modalPresentationStyle = .fullScreen
+                    self.present(viewController, animated: true, completion: nil)
+                }
                 
             }
         }

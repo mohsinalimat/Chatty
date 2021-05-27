@@ -11,6 +11,12 @@ class CurrentUser: NSObject {
     
     private static let signOutError = "signOutError"
     
+    static var displayName: String? {
+        get {
+            return Auth.auth().currentUser?.displayName
+        }
+    }
+    
     static public func signOut(completion: ((_ error: NSError?) -> Void)?) {
         do {
             try Auth.auth().signOut()

@@ -35,7 +35,7 @@
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-Ym-d50" customClass="VerifyTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-Ym-d50" customClass="VerifyTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="139.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>

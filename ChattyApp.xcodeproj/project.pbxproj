@@ -14,6 +14,8 @@
 		1836FEE026585493009055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1836FEDE26585493009055DD /* LaunchScreen.storyboard */; };
 		1836FEEB26585494009055DD /* ChattyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FEEA26585494009055DD /* ChattyAppTests.swift */; };
 		1836FEF626585494009055DD /* ChattyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FEF526585494009055DD /* ChattyAppUITests.swift */; };
+		1860EA19265EEE8D00DC69A9 /* GetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860EA17265EEE8D00DC69A9 /* GetNameViewController.swift */; };
+		1860EA1A265EEE8D00DC69A9 /* GetNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860EA18265EEE8D00DC69A9 /* GetNameViewController.xib */; };
 		186D4AC4265AAD930046389B /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4AC3265AAD930046389B /* Window.swift */; };
 		186D4AC9265AD6770046389B /* PrimaryMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4AC7265AD6770046389B /* PrimaryMessageBubble.swift */; };
 		186D4ACA265AD6770046389B /* PrimaryMessageBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186D4AC8265AD6770046389B /* PrimaryMessageBubble.xib */; };
@@ -96,6 +98,8 @@
 		1836FEF126585494009055DD /* ChattyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChattyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1836FEF526585494009055DD /* ChattyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattyAppUITests.swift; sourceTree = "<group>"; };
 		1836FEF726585494009055DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1860EA17265EEE8D00DC69A9 /* GetNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNameViewController.swift; sourceTree = "<group>"; };
+		1860EA18265EEE8D00DC69A9 /* GetNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetNameViewController.xib; sourceTree = "<group>"; };
 		186D4AC3265AAD930046389B /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		186D4AC7265AD6770046389B /* PrimaryMessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryMessageBubble.swift; sourceTree = "<group>"; };
 		186D4AC8265AD6770046389B /* PrimaryMessageBubble.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrimaryMessageBubble.xib; sourceTree = "<group>"; };
@@ -244,6 +248,15 @@
 			path = ChattyAppUITests;
 			sourceTree = "<group>";
 		};
+		1860EA14265EEE3100DC69A9 /* Get Name */ = {
+			isa = PBXGroup;
+			children = (
+				1860EA18265EEE8D00DC69A9 /* GetNameViewController.xib */,
+				1860EA17265EEE8D00DC69A9 /* GetNameViewController.swift */,
+			);
+			path = "Get Name";
+			sourceTree = "<group>";
+		};
 		186D4AC5265AD5F70046389B /* PrimaryMessageBubble */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +281,7 @@
 				1885DCD92658989D0054133B /* Auth */,
 				1885DCC6265861770054133B /* Main */,
 				189F8E06265AA294004EA3EE /* Message */,
-				18DE4078265C04FC0097EED5 /* ErrorPopUp */,
+				18DE4078265C04FC0097EED5 /* Error */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +350,7 @@
 				18BDE75B265966E200EB1726 /* Log In */,
 				18BDE75C265966EC00EB1726 /* Sign Up */,
 				18982913265C82CD00A9422D /* Verify */,
+				1860EA14265EEE3100DC69A9 /* Get Name */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -433,13 +447,13 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
-		18DE4078265C04FC0097EED5 /* ErrorPopUp */ = {
+		18DE4078265C04FC0097EED5 /* Error */ = {
 			isa = PBXGroup;
 			children = (
 				18EAABBF265C1248002125FA /* ErrorPopUpController.xib */,
 				18EAABBE265C1248002125FA /* ErrorPopUpController.swift */,
 			);
-			path = ErrorPopUp;
+			path = Error;
 			sourceTree = "<group>";
 		};
 		316D32398FD233DC2504B0CB /* Frameworks */ = {
@@ -583,6 +597,7 @@
 				1836FEE026585493009055DD /* LaunchScreen.storyboard in Resources */,
 				1836FEDD26585493009055DD /* Assets.xcassets in Resources */,
 				1836FEDB26585493009055DD /* Main.storyboard in Resources */,
+				1860EA1A265EEE8D00DC69A9 /* GetNameViewController.xib in Resources */,
 				18982911265C7BAD00A9422D /* AuthKey_5N82GZ3RN2.p8 in Resources */,
 				18F41E94265AAADD00041D1B /* MessageController.xib in Resources */,
 				18BDE75A265966DC00EB1726 /* SignUpViewController.xib in Resources */,
@@ -744,6 +759,7 @@
 				18932DE9265DD0DA005CE615 /* ViewController.swift in Sources */,
 				18932DE1265DC435005CE615 /* Error.swift in Sources */,
 				18BA19BE265B37D300864082 /* PhoneTextField.swift in Sources */,
+				1860EA19265EEE8D00DC69A9 /* GetNameViewController.swift in Sources */,
 				186D4AD2265B1B5F0046389B /* MaterialTextField.swift in Sources */,
 				18932DE7265DC728005CE615 /* CurrentUser.swift in Sources */,
 				186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */,

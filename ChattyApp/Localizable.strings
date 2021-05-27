@@ -22,6 +22,8 @@
 
  *********************/
 
+"INVALID_CHARACTER_ERROR" = "The character entered is invalid.";
+
 "PHONE_NUMBER_FIELD_EMPTY_ERROR" = "A phone number is required to create your account.";
 
 "USER_EXISTS_ERROR" = "The phone number provided is already being used by another account.";

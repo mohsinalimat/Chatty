@@ -41,7 +41,7 @@ class PhoneTextField: MaterialTextField {
 extension PhoneTextField: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.isEmpty {
+        if range.lowerBound != range.upperBound {
             
             var text = self.textField.text ?? ""
             
@@ -80,7 +80,7 @@ extension PhoneTextField: UITextFieldDelegate {
         }
         
         guard let digit = Int(string) else {
-            Vibration.vibrate(type: .error)
+            self.findViewController()?.presentError(withMessage: INVALID_CHARACTER_ERROR)
             return false
         }
         

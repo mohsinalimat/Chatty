@@ -51,12 +51,11 @@ extension VerifyTextField: UITextFieldDelegate {
         }
         
         guard let _ = Int(string) else {
-            Vibration.vibrate(type: .error)
+            self.findViewController()?.presentError(withMessage: INVALID_CHARACTER_ERROR)
             return false
         }
         
         if ((textField.text?.count ?? 0) + string.count) > 6 {
-            Vibration.vibrate(type: .error)
             return false
         }
         

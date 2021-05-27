@@ -52,30 +52,30 @@ class SignUpViewController: UIViewController {
             .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         
         if phoneNumber.isEmpty {
-            self.showError(withMessage: "A phone number is required to create your account.")
+            self.presentError(withMessage: "A phone number is required to create your account.")
             return
         }
         
         User.doesUserExist(whereField: .phoneNumber, isEqualTo: phoneNumber) { exists, error in
             if let error = error {
-                self.showError(withMessage: error.localizedDescription)
+                self.presentError(withMessage: error.localizedDescription)
                 return
             }
             
             guard let exists = exists else {
-                self.showError()
+                self.presentError()
                 return
             }
             
             if exists {
-                self.showError(withMessage: USER_EXISTS_ERROR)
+                self.presentError(withMessage: USER_EXISTS_ERROR)
                 return
             }
             
             Authenticator().verify(phoneNumber: phoneNumber) { (verificationID, error) in
                 DispatchQueue.main.async {
                     if let error = error {
-                        self.showError(withMessage: error.localizedDescription)
+                        self.presentError(withMessage: error.localizedDescription)
                         return
                     }
                     

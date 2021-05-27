@@ -9,11 +9,11 @@ import UIKit
 
 extension UIViewController {
     
-    func showError() {
+    func presentError() {
         self.present(ErrorPopUpController(), animated: true, completion: nil)
     }
     
-    func showError(withMessage message: String) {
+    func presentError(withMessage message: String) {
         self.present(ErrorPopUpController(withMessage: message), animated: true, completion: nil)
     }
     
