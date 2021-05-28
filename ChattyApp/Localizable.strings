@@ -22,8 +22,16 @@
 
  *********************/
 
+"GENERIC_ERROR" = "Something went wrong! Please try checking your network connection or try again later.";
+
+"USERNAME_REQUIRED_ERROR" = "A username is required.";
+
 "INVALID_CHARACTER_ERROR" = "The character entered is invalid.";
+
+"USERNAME_TAKEN_ERROR" = "The username provided is already being used by another account.";
 
 "PHONE_NUMBER_FIELD_EMPTY_ERROR" = "A phone number is required to create your account.";
 
 "USER_EXISTS_ERROR" = "The phone number provided is already being used by another account.";
+
+"USERNAME_INVALID_ERROR" = "The username that you entered is not valid. All usernames must be between 5-20 characters and may only contain letters, numbers, underscores, hyphens, or decimals.";

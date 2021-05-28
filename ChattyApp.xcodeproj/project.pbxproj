@@ -16,6 +16,7 @@
 		1836FEF626585494009055DD /* ChattyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FEF526585494009055DD /* ChattyAppUITests.swift */; };
 		1860EA19265EEE8D00DC69A9 /* GetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860EA17265EEE8D00DC69A9 /* GetNameViewController.swift */; };
 		1860EA1A265EEE8D00DC69A9 /* GetNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860EA18265EEE8D00DC69A9 /* GetNameViewController.xib */; };
+		1860EA1C265F531A00DC69A9 /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860EA1B265F531A00DC69A9 /* Username.swift */; };
 		186D4AC4265AAD930046389B /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4AC3265AAD930046389B /* Window.swift */; };
 		186D4AC9265AD6770046389B /* PrimaryMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4AC7265AD6770046389B /* PrimaryMessageBubble.swift */; };
 		186D4ACA265AD6770046389B /* PrimaryMessageBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186D4AC8265AD6770046389B /* PrimaryMessageBubble.xib */; };
@@ -100,6 +101,7 @@
 		1836FEF726585494009055DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1860EA17265EEE8D00DC69A9 /* GetNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNameViewController.swift; sourceTree = "<group>"; };
 		1860EA18265EEE8D00DC69A9 /* GetNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetNameViewController.xib; sourceTree = "<group>"; };
+		1860EA1B265F531A00DC69A9 /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		186D4AC3265AAD930046389B /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		186D4AC7265AD6770046389B /* PrimaryMessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryMessageBubble.swift; sourceTree = "<group>"; };
 		186D4AC8265AD6770046389B /* PrimaryMessageBubble.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrimaryMessageBubble.xib; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				18932DDA265DB115005CE615 /* User.swift */,
+				1860EA1B265F531A00DC69A9 /* Username.swift */,
 				18932DE6265DC728005CE615 /* CurrentUser.swift */,
 				1885DCE22658AA1C0054133B /* Authenticator.swift */,
 			);
@@ -753,6 +756,7 @@
 				18932DE5265DC6D4005CE615 /* Date.swift in Sources */,
 				1885DCD826587A170054133B /* ProfileViewController.swift in Sources */,
 				18BDE759265966DC00EB1726 /* SignUpViewController.swift in Sources */,
+				1860EA1C265F531A00DC69A9 /* Username.swift in Sources */,
 				18B2C8E2265A8D47000850C0 /* TextView.swift in Sources */,
 				1836FED626585493009055DD /* SceneDelegate.swift in Sources */,
 				18EAABC0265C1248002125FA /* ErrorPopUpController.swift in Sources */,

@@ -38,7 +38,7 @@
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Zn-sl1" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Zn-sl1" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="139.5" width="153" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -46,7 +46,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="John"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-Oo-7Xi" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-Oo-7Xi" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="211" y="139.5" width="153" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -54,7 +54,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Appleseed"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-6Y-dC5" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-6Y-dC5" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="211.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -79,7 +79,7 @@
                         <action selector="primaryButtonTapped:" destination="-1" eventType="touchUpInside" id="Jnu-iA-apU"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-yJ-keI" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-yJ-keI" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="283.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
