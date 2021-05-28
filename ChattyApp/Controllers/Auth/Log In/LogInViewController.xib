@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="ChattyApp" customModuleProvider="target">
             <connections>
+                <outlet property="phoneTextField" destination="EOb-ta-Mak" id="V27-TM-ebC"/>
                 <outlet property="primaryButtonBottomAnchor" destination="RPB-d2-yvx" id="FNc-Nv-kCH"/>
                 <outlet property="primaryLabel" destination="P5i-5f-shy" id="eY7-HY-y22"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,7 +34,7 @@
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-ta-Mak" customClass="PhoneTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-ta-Mak" customClass="PhoneTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="139.5" width="314" height="86"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>

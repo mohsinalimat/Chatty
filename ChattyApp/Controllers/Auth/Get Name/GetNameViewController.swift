@@ -62,6 +62,7 @@ class GetNameViewController: UIViewController {
         
         self.usernameTextField.textField.tag = 2
         self.usernameTextField.textField.delegate = self
+        self.usernameTextField.autoCapitalization = .none
         self.usernameTextField.textField.keyboardType = .alphabet
         self.usernameTextField.textField.textContentType = .username
         
@@ -97,10 +98,12 @@ class GetNameViewController: UIViewController {
             .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let lastName = self.lastNameTextField.text?
             .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let username = self.usernameTextField.text?
-            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let dob = self.dobTextField.text?
             .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        let username = self.usernameTextField.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        self.usernameTextField.text = username.lowercased()
         
         if firstName.isEmpty || lastName.isEmpty || username.isEmpty || dob.isEmpty {
             self.presentError(withMessage: self.emptyError)

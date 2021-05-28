@@ -217,7 +217,6 @@
 				1836FED326585493009055DD /* AppDelegate.swift */,
 				1836FED526585493009055DD /* SceneDelegate.swift */,
 				1836FEDE26585493009055DD /* LaunchScreen.storyboard */,
-				1885DCC426585FF50054133B /* Models */,
 				1885DCC326585FEB0054133B /* Services */,
 				1885DCDF2658A2DD0054133B /* Views */,
 				1885DCC226585FE20054133B /* Controllers */,
@@ -297,13 +296,6 @@
 				1885DCE22658AA1C0054133B /* Authenticator.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		1885DCC426585FF50054133B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1885DCC526585FFF0054133B /* Globals */ = {

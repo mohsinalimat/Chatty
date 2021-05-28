@@ -8,6 +8,7 @@
 import UIKit
 
 protocol VerifyNavigationDelegate {
+    func dismiss(from verifyViewController: VerifyViewController)
     func navigate(from verifyViewController: VerifyViewController, to getNameViewController: GetNameViewController)
 }
 
@@ -124,11 +125,15 @@ class VerifyViewController: UIViewController {
                         return
                     }
                     
-                    self.navigationDelegate?.navigate(from: self, to: GetNameViewController())
+                    if authResult.user.displayName == nil {
+                        self.navigationDelegate?.navigate(from: self, to: GetNameViewController())
+                    } else {
+                        self.navigationDelegate?.dismiss(from: self)
+                    }
                     
                 }
                 
-
+                
             }
         }
         

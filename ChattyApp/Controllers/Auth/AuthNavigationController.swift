@@ -63,6 +63,11 @@ extension AuthNavigationController: OpeningNavigationDelegate {
 
 extension AuthNavigationController: LogInNavigationDelegate {
     
+    func navigate(from logInViewController: LogInViewController, to verifyViewController: VerifyViewController) {
+        verifyViewController.navigationDelegate = self
+        self.pushViewController(verifyViewController, animated: true)
+    }
+    
     func navigate(from logInViewController: LogInViewController, to signUpViewController: SignUpViewController) {
         signUpViewController.navigationDelegate = self
         self.pushViewController(signUpViewController, animated: true)
@@ -103,6 +108,10 @@ extension AuthNavigationController: SignUpNavigationDelegate {
 
 
 extension AuthNavigationController: VerifyNavigationDelegate {
+    
+    func dismiss(from verifyViewController: VerifyViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func navigate(from verifyViewController: VerifyViewController, to getNameViewController: GetNameViewController) {
         getNameViewController.navigationDelegate = self

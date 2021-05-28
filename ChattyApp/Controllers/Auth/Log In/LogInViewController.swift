@@ -10,11 +10,13 @@ import Firebase
 
 protocol LogInNavigationDelegate {
     func navigate(from logInViewController: LogInViewController, to signUpViewController: SignUpViewController)
+    func navigate(from logInViewController: LogInViewController, to verifyViewController: VerifyViewController)
 }
 
 class LogInViewController: UIViewController {
     
     @IBOutlet weak var primaryLabel: UILabel!
+    @IBOutlet weak var phoneTextField: PhoneTextField!
     @IBOutlet weak var primaryButtonBottomAnchor: NSLayoutConstraint!
     
     
@@ -54,7 +56,50 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func primaryButtonTapped(_ sender: Any) {
-    
+        let phoneNumber: String = self.phoneTextField.textField.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        if phoneNumber.isEmpty {
+            self.presentError(withMessage: "A phone number is required to create your account.")
+            return
+        }
+        
+        User.doesUserExist(whereField: .phoneNumber, isEqualTo: phoneNumber) { exists, error in
+            if let error = error {
+                self.presentError(withMessage: error.localizedDescription)
+                return
+            }
+            
+            guard let exists = exists else {
+                self.presentError()
+                return
+            }
+            
+            if !exists {
+                self.presentError(withMessage: USER_DOES_NOT_EXIST_ERROR)
+                return
+            }
+            
+            Authenticator().verify(phoneNumber: phoneNumber) { (verificationID, error) in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self.presentError(withMessage: error.localizedDescription)
+                        return
+                    }
+                    
+                    guard let verificationID = verificationID else {
+                        return
+                    }
+                    
+                    /// Save the verification ID and phone number on the device
+                    UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
+                    UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+                    
+                    self.navigationDelegate?.navigate(from: self, to: VerifyViewController(phoneNumber: phoneNumber, verificationID: verificationID))
+                }
+            }
+            
+        }
         
     }
     
