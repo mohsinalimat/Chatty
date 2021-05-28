@@ -111,7 +111,7 @@ class VerifyViewController: UIViewController {
                     return
                 }
                 
-                User(withID: authResult.user.uid).setData([
+                User(withID: authResult.user.uid).set([
                 
                     .phoneNumber: phoneNumber,
                     .userID: authResult.user.uid,

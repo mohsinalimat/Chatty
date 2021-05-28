@@ -24,6 +24,8 @@ class GetNameViewController: UIViewController {
     
     var navigationDelegate: GetNameNavigationDelegate?
     
+    private let emptyError = EMPTY_FIELD_ERROR
+    private let dobError = INVALID_DATE_FORMAT_ERROR
     
     let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -91,7 +93,63 @@ class GetNameViewController: UIViewController {
     
     
     @IBAction func primaryButtonTapped(_ sender: Any) {
-        // MARK: Collect and store data in Firebase (update displayName)
+        let firstName = self.firstNameTextField.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let lastName = self.lastNameTextField.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let username = self.usernameTextField.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let dob = self.dobTextField.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
+        if firstName.isEmpty || lastName.isEmpty || username.isEmpty || dob.isEmpty {
+            self.presentError(withMessage: self.emptyError)
+            return
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d, yyyy"
+        guard let dateOfBirth: Date = formatter.date(from: dob) else {
+            self.presentError(withMessage: self.dobError)
+            return
+        }
+        
+        guard let userID = CurrentUser.uid else {
+            self.presentError()
+            return
+        }
+        
+        Username(username).record(forUserWithID: userID) { error in
+            if let error = error {
+                self.presentError(withMessage: error.localizedDescription)
+                return
+            }
+            
+            User(withID: userID).set([
+                
+                .firstName: firstName,
+                .lastName: lastName,
+                .username: username,
+                .dateOfBirth: dateOfBirth,
+                
+            ]) { error in
+                
+                if let error = error {
+                    self.presentError(withMessage: error.localizedDescription)
+                    return
+                }
+                
+                CurrentUser.setDisplayName(to: username) { error in
+                    if let error = error {
+                        self.presentError(withMessage: error.localizedDescription)
+                        return
+                    }
+                    
+                    self.navigationDelegate?.dismiss(from: self)
+                }
+                
+            }
+        }
     }
     
     
@@ -101,7 +159,7 @@ class GetNameViewController: UIViewController {
         if let date = picker?.date {
             let formatter = DateFormatter()
             formatter.dateFormat = "MMMM d, yyyy"
-            self.dobTextField.textField.text = "\(formatter.string(from: date))"
+            self.dobTextField.text = "\(formatter.string(from: date))"
         }
     }
     
@@ -146,7 +204,7 @@ extension GetNameViewController: UITextFieldDelegate {
             if let date = (self.dobTextField.textField.inputView as? UIDatePicker)?.date {
                 let formatter = DateFormatter()
                 formatter.dateFormat = "MMMM d, yyyy"
-                self.dobTextField.textField.text = "\(formatter.string(from: date))"
+                self.dobTextField.text = "\(formatter.string(from: date))"
             }
             
         }

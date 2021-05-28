@@ -22,9 +22,13 @@
 
  *********************/
 
+"EMPTY_FIELD_ERROR" = "All fields are required.";
+
 "GENERIC_ERROR" = "Something went wrong! Please try checking your network connection or try again later.";
 
 "USERNAME_REQUIRED_ERROR" = "A username is required.";
+
+"INVALID_DATE_FORMAT_ERROR" = "The format of your date of birth is not valid.";
 
 "INVALID_CHARACTER_ERROR" = "The character entered is invalid.";
 

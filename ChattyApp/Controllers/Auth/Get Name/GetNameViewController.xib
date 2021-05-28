@@ -38,23 +38,23 @@
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Zn-sl1" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
-                    <rect key="frame" x="50" y="139.5" width="153" height="60"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Zn-sl1" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                    <rect key="frame" x="50" y="139.5" width="151" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="First Name"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="John"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-Oo-7Xi" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
-                    <rect key="frame" x="211" y="139.5" width="153" height="60"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-Oo-7Xi" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                    <rect key="frame" x="213" y="139.5" width="151" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Last Name"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Appleseed"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-6Y-dC5" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-6Y-dC5" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="211.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -79,7 +79,7 @@
                         <action selector="primaryButtonTapped:" destination="-1" eventType="touchUpInside" id="Jnu-iA-apU"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-yJ-keI" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-yJ-keI" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="283.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -99,7 +99,7 @@
                 <constraint firstItem="RnB-6Y-dC5" firstAttribute="leading" secondItem="DH0-u8-rhm" secondAttribute="leading" id="AQd-PH-gWL"/>
                 <constraint firstItem="RnB-6Y-dC5" firstAttribute="top" secondItem="c4I-Zn-sl1" secondAttribute="bottom" constant="12" id="F00-Uw-fa2"/>
                 <constraint firstItem="RnB-6Y-dC5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="J3v-vF-m1p"/>
-                <constraint firstItem="dYY-Oo-7Xi" firstAttribute="leading" secondItem="c4I-Zn-sl1" secondAttribute="trailing" constant="8" id="LgO-zA-owe"/>
+                <constraint firstItem="dYY-Oo-7Xi" firstAttribute="leading" secondItem="c4I-Zn-sl1" secondAttribute="trailing" constant="12" id="LgO-zA-owe"/>
                 <constraint firstItem="dYY-Oo-7Xi" firstAttribute="height" secondItem="c4I-Zn-sl1" secondAttribute="height" id="P0b-vx-vwb"/>
                 <constraint firstItem="WuO-yJ-keI" firstAttribute="centerX" secondItem="RnB-6Y-dC5" secondAttribute="centerX" id="U8b-aM-c2M"/>
                 <constraint firstItem="DH0-u8-rhm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="WGn-pX-Wbq"/>

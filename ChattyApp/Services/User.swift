@@ -42,11 +42,12 @@ class User: NSObject {
     }
     
     
-    public func setData(_ data: [User.DataTypes: Any], _ completion: @escaping (_ error: NSError?) -> Void) {
+    public func set(_ data: [User.DataTypes: Any], _ completion: @escaping (_ error: NSError?) -> Void) {
         self.userCollection.document(self.userID).setData(data.rawValues, merge: true) { error in
             completion(error?.asNSError)
         }
     }
+    
     
     static public func doesUserExist(whereField field: User.DataTypes, isEqualTo value: Any, _ completion: @escaping (_ exists: Bool?, _ error: NSError?) -> Void) {
         Firestore.firestore().collection("users").whereField(field.rawValue, isEqualTo: value).getDocuments { snapshot, error in

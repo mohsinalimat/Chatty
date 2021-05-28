@@ -40,6 +40,16 @@ class MaterialTextField: UIView {
         }
     }
     
+    @IBInspectable
+    var text: String? {
+        get {
+            return self.textField.text
+        }
+        set {
+            self.textField.text = newValue
+        }
+    }
+    
     var keyboardType: UIKeyboardType {
         get {
             return self.textField.keyboardType

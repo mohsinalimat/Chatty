@@ -41,6 +41,7 @@ class MainTabBarController: UITabBarController {
                 // Should finish gathering user info.
                 if CurrentUser.displayName == nil {
                     let viewController = GetNameViewController()
+                    viewController.navigationDelegate = self
                     viewController.modalTransitionStyle = .crossDissolve
                     viewController.modalPresentationStyle = .fullScreen
                     self.present(viewController, animated: true, completion: nil)
@@ -62,4 +63,15 @@ class MainTabBarController: UITabBarController {
         
     }
 
+}
+
+// MARK: - DELEGATE: Get Name Navigation Delegate
+
+
+extension MainTabBarController: GetNameNavigationDelegate {
+    
+    func dismiss(from getNameViewController: GetNameViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

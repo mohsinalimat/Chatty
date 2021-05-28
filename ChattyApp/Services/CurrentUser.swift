@@ -11,11 +11,33 @@ class CurrentUser: NSObject {
     
     private static let signOutError = "signOutError"
     
+    static var uid: String? {
+        get {
+            return self.user?.uid
+        }
+    }
+    
+    static var user: FirebaseAuth.User? {
+        get {
+            return Auth.auth().currentUser
+        }
+    }
+    
     static var displayName: String? {
         get {
             return Auth.auth().currentUser?.displayName
         }
     }
+    
+    
+    static public func setDisplayName(to name: String, _ completion: @escaping (_ error: NSError?) -> Void) {
+        let changeRequest = CurrentUser.user?.createProfileChangeRequest()
+        changeRequest?.displayName = name
+        changeRequest?.commitChanges { (error) in
+            completion(error?.asNSError)
+        }
+    }
+    
     
     static public func signOut(completion: ((_ error: NSError?) -> Void)?) {
         do {
