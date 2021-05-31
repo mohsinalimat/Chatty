@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class MainTabBarController: UITabBarController {
 
@@ -26,8 +25,13 @@ class MainTabBarController: UITabBarController {
         self.tabBar.layer.borderWidth = 0.2
         self.tabBar.layer.borderColor = UIColor.separator.cgColor
         
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if user == nil {
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        CurrentUser.isSignedIn { signedIn in
+            if !signedIn {
                 
                 let viewController = AuthNavigationController()
                 viewController.modalTransitionStyle = .crossDissolve
@@ -40,26 +44,25 @@ class MainTabBarController: UITabBarController {
                 // was an interuption in the sign up process.
                 // Should finish gathering user info.
                 if CurrentUser.displayName == nil {
+                    
                     let viewController = GetNameViewController()
                     viewController.navigationDelegate = self
                     viewController.modalTransitionStyle = .crossDissolve
                     viewController.modalPresentationStyle = .fullScreen
                     self.present(viewController, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    CurrentUser.storeProfileOnDevice { error in
+                        guard let error = error else {
+                            return
+                        }
+                        self.presentError(withMessage: error.localizedDescription)
+                    }
+                    
                 }
-                
             }
         }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-        
-    }
-    
-    private func goToAuthenticator() {
         
     }
 

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 protocol LogInNavigationDelegate {
     func navigate(from logInViewController: LogInViewController, to signUpViewController: SignUpViewController)

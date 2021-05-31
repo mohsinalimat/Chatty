@@ -12,13 +12,14 @@ class User: NSObject {
     
     
     enum DataTypes: String {
-        case userID = "userID"
+        case userID = "_userID"
         case created = "created"
         case username = "username"
         case lastName = "lastName"
         case firstName = "firstName"
         case dateOfBirth = "dateOfBirth"
         case phoneNumber = "phoneNumber"
+        case profilePicture = "profilePicture"
     }
     
     

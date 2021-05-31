@@ -6,10 +6,14 @@
 //
 
 import Firebase
+import RealmSwift
 
 class CurrentUser: NSObject {
     
     private static let signOutError = "signOutError"
+    private static let userCollection = Firestore.firestore().collection("users")
+    
+    private static let invalidOperationError = NSError(domain: "INVALID_CURRENT_USER_OPERATION", code: 0, userInfo: [NSLocalizedDescriptionKey: INVALID_CURRENT_USER_OPERATION])
     
     static var uid: String? {
         get {
@@ -60,4 +64,51 @@ class CurrentUser: NSObject {
         }
     }
     
+    
+    static func isSignedIn(_ completion: @escaping (_ signedIn: Bool) -> Void) {
+        CurrentUser.addStateDidChangeListener { auth, user in
+            completion(user != nil)
+        }
+    }
+    
+    
+    static func addStateDidChangeListener(_ completion: @escaping (_ auth: Auth, _ user: FirebaseAuth.User?) -> Void) {
+        Auth.auth().addStateDidChangeListener { auth, user in
+            completion(auth, user)
+        }
+    }
+    
+    
+    static public func storeProfileOnDevice(_ completion: @escaping (_ error: NSError?) -> Void) {
+        guard let uid = self.uid else {
+            completion(self.invalidOperationError)
+            return
+        }
+        
+        self.userCollection.document(uid).addSnapshotListener { snapshot, error in
+            if let error = error {
+                completion(error.asNSError)
+                return
+            }
+            
+            guard let snapshot = snapshot else {
+                completion(self.invalidOperationError)
+                return
+            }
+            
+            let user = UserStore()
+            user.userID = snapshot.data()?[User.DataTypes.userID.rawValue] as? String
+            user.username = snapshot.data()?[User.DataTypes.username.rawValue] as? String
+            user.firstName = snapshot.data()?[User.DataTypes.firstName.rawValue] as? String
+            user.lastName = snapshot.data()?[User.DataTypes.lastName.rawValue] as? String
+            user.phoneNumber = snapshot.data()?[User.DataTypes.phoneNumber.rawValue] as? String
+            user.profilePicture = snapshot.data()?[User.DataTypes.profilePicture.rawValue] as? String
+            user.created = (snapshot.data()?[User.DataTypes.created.rawValue] as? Timestamp)?.dateValue()
+            user.dateOfBirth = (snapshot.data()?[User.DataTypes.dateOfBirth.rawValue] as? Timestamp)?.dateValue()
+            
+            user.store { error in
+                completion(error)
+            }
+        }
+    }
 }

@@ -19,6 +19,7 @@ target 'ChattyApp' do
   pod 'SDWebImage'
 
   pod 'Realm'
+  pod 'RealmSwift'
   
   pod 'AlgoliaSearchClient'
 

@@ -13,7 +13,7 @@ class Username: NSObject {
     enum DataTypes: String {
         case userID = "userID"
         case created = "created"
-        case username = "username"
+        case username = "_username"
     }
     
     

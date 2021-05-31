@@ -133,7 +133,7 @@ class GetNameViewController: UIViewController {
                 .firstName: firstName,
                 .lastName: lastName,
                 .username: username,
-                .dateOfBirth: dateOfBirth,
+                .dateOfBirth: dateOfBirth.toFirebaseTimestamp(),
                 
             ]) { error in
                 

@@ -429,6 +429,8 @@ PODS:
   - Realm (10.7.6):
     - Realm/Headers (= 10.7.6)
   - Realm/Headers (10.7.6)
+  - RealmSwift (10.7.6):
+    - Realm (= 10.7.6)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
@@ -445,6 +447,7 @@ DEPENDENCIES:
   - "MaterialComponents/TextControls+OutlinedTextAreas"
   - "MaterialComponents/TextControls+OutlinedTextFields"
   - Realm
+  - RealmSwift
   - SDWebImage
 
 SPEC REPOS:
@@ -474,6 +477,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Realm
+    - RealmSwift
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -502,8 +506,9 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Realm: ed860452717c8db8f4bf832b6807f7f2ce708839
+  RealmSwift: e31c4ddbcc42ac879313d656b86f9ca539f6f4f4
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 93f5d5984a82eef4379cb37bc27fe2e417ec11cd
+PODFILE CHECKSUM: edcc59b8895e38a10c111698a3e0ee69aca3d020
 
 COCOAPODS: 1.10.1

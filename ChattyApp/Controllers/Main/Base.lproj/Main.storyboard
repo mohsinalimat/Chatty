@@ -30,7 +30,7 @@
         <scene sceneID="eEu-wX-TIs">
             <objects>
                 <navigationController storyboardIdentifier="InboxNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BZx-Cj-pcP" customClass="InboxNavigationController" customModule="ChattyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bubble.left.and.bubble.right.fill" selectedImage="bubble.left.and.bubble.right.fill" catalog="system" id="Gey-jD-ejn"/>
+                    <tabBarItem key="tabBarItem" title="" image="bubble.left.and.bubble.right.fill" catalog="system" selectedImage="bubble.left.and.bubble.right.fill" id="Gey-jD-ejn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ny3-vy-g21">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -41,7 +41,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbj-js-Zbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113.0434782608697" y="-496.20535714285711"/>
+            <point key="canvasLocation" x="1112" y="-480"/>
         </scene>
         <!--Profile Navigation Controller-->
         <scene sceneID="3Ag-TG-Yfv">
@@ -57,15 +57,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndv-z2-6rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114.4927536231885" y="151.33928571428569"/>
+            <point key="canvasLocation" x="1113" y="210"/>
         </scene>
     </scenes>
     <resources>
         <image name="bubble.left.and.bubble.right.fill" catalog="system" width="128" height="97"/>
-        <image name="bubble.left.and.bubble.right.fill" width="128" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="SelectedTabBarIconColor">
-            <color red="0.2907061279" green="0.48032552000000001" blue="0.96867483850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.29100000858306885" green="0.47999998927116394" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
