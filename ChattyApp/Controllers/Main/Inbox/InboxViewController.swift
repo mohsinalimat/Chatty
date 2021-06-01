@@ -8,6 +8,10 @@
 import UIKit
 
 class InboxViewController: UITableViewController {
+    
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()

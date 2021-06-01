@@ -1,5 +1,5 @@
 //
-//  ProfileNavigationController.swift
+//  InboxNavigationController.swift
 //  ChattyApp
 //
 //  Created by Kristopher Jackson on 5/21/21.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class ProfileNavigationController: UINavigationController {
+class InboxNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let viewController = ProfileViewController(nibName: nil, bundle: nil)
+        self.navigationBar.prefersLargeTitles = true
+        
+        let viewController = InboxViewController()
         self.viewControllers = [viewController]
         
     }
-    
-
 
 }

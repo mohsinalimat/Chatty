@@ -15,15 +15,31 @@ class MainTabBarController: UITabBarController {
         // Configure tabbar appearance
         let appearance = tabBar.standardAppearance
         appearance.backgroundColor = .white
-        appearance.stackedLayoutAppearance.normal.iconColor = UIColor(named: "UnselectedTabBarIconColor")
+        appearance.stackedLayoutAppearance.normal.iconColor = .systemGray2
         appearance.stackedLayoutAppearance.selected.iconColor = UIColor(named: "SelectedTabBarIconColor")
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.tabBar.standardAppearance = appearance
         
+        
         self.tabBar.clipsToBounds = true
         self.tabBar.layer.borderWidth = 0.2
         self.tabBar.layer.borderColor = UIColor.separator.cgColor
+        
+        
+        let inboxNavigationController = InboxNavigationController()
+        inboxNavigationController.tabBarItem = UITabBarItem(title: nil,
+                                                            image: UIImage(systemName: "bubble.left.and.bubble.right.fill"),
+                                                            selectedImage: UIImage(systemName: "bubble.left.and.bubble.right.fill"))
+        
+        
+        let profileNavigationController = ProfileNavigationController()
+        profileNavigationController.tabBarItem = UITabBarItem(title: nil,
+                                                            image: UIImage(systemName: "person.fill"),
+                                                            selectedImage: UIImage(systemName: "person.fill"))
+        
+        
+        self.viewControllers = [inboxNavigationController, profileNavigationController]
         
     }
     

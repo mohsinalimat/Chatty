@@ -19,6 +19,7 @@ class UserStore: Object {
     @objc dynamic var created: Date?
     @objc dynamic var dateOfBirth: Date?
     
+    
     override static func primaryKey() -> String? {
         return "userID"
     }
@@ -37,6 +38,30 @@ class UserStore: Object {
             
             completion(error.asNSError)
             
+        }
+    }
+    
+    
+    public static func objects(where predicate: (_ user: UserStore) -> Bool,
+                               _ completion: @escaping (_ objects: [UserStore]?, _ error: NSError?) -> Void) {
+        do {
+            
+            let realm = try Realm()
+            let objects = realm.objects(UserStore.self).filter(predicate)
+            completion(objects, nil)
+            
+        } catch {
+            
+            completion(nil, error.asNSError)
+            
+        }
+    }
+    
+    
+    public static func firstObject(where predicate: (_ user: UserStore) -> Bool,
+                                   _ completion: @escaping (_ realmUser: UserStore?, _ error: NSError?) -> Void) {
+        self.objects(where: predicate) { objects, error in
+            completion(objects?.first, error)
         }
     }
     

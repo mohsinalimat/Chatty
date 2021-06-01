@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1836FED426585493009055DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FED326585493009055DD /* AppDelegate.swift */; };
 		1836FED626585493009055DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FED526585493009055DD /* SceneDelegate.swift */; };
-		1836FEDB26585493009055DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1836FED926585493009055DD /* Main.storyboard */; };
 		1836FEDD26585493009055DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1836FEDC26585493009055DD /* Assets.xcassets */; };
 		1836FEE026585493009055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1836FEDE26585493009055DD /* LaunchScreen.storyboard */; };
 		1836FEEB26585494009055DD /* ChattyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FEEA26585494009055DD /* ChattyAppTests.swift */; };
@@ -23,11 +22,9 @@
 		186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4ACB265ADB1F0046389B /* SecondaryMessageBubble.swift */; };
 		186D4ACE265ADB1F0046389B /* SecondaryMessageBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186D4ACC265ADB1F0046389B /* SecondaryMessageBubble.xib */; };
 		186D4AD2265B1B5F0046389B /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4AD1265B1B5F0046389B /* MaterialTextField.swift */; };
-		1885DCC8265863020054133B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCC7265863020054133B /* MainTabBarController.swift */; };
 		1885DCD0265865C40054133B /* InboxNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCCF265865C40054133B /* InboxNavigationController.swift */; };
 		1885DCD22658750D0054133B /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCD12658750D0054133B /* ProfileNavigationController.swift */; };
 		1885DCD5265878540054133B /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCD3265878540054133B /* InboxViewController.swift */; };
-		1885DCD826587A170054133B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCD726587A170054133B /* ProfileViewController.swift */; };
 		1885DCDE26589B5B0054133B /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCDD26589B5B0054133B /* AuthNavigationController.swift */; };
 		1885DCE12658A8520054133B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1885DCE02658A8520054133B /* GoogleService-Info.plist */; };
 		1885DCE32658AA1C0054133B /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCE22658AA1C0054133B /* Authenticator.swift */; };
@@ -62,6 +59,12 @@
 		18BDE75A265966DC00EB1726 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BDE758265966DC00EB1726 /* SignUpViewController.xib */; };
 		18BDE75E2659ED8300EB1726 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDE75D2659ED8300EB1726 /* LogoView.swift */; };
 		18D20AAD26642D4E0075C672 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AAC26642D4E0075C672 /* String.swift */; };
+		18D20AB0266570290075C672 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AAE266570290075C672 /* MainTabBarController.swift */; };
+		18D20AB3266570960075C672 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D20AB2266570960075C672 /* Main.storyboard */; };
+		18D20ABF2665749C0075C672 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20ABD2665749C0075C672 /* ProfileViewController.swift */; };
+		18D20AC02665749C0075C672 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D20ABE2665749C0075C672 /* ProfileViewController.xib */; };
+		18D20AC92665817E0075C672 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AC72665817E0075C672 /* ProfileHeaderView.swift */; };
+		18D20ACA2665817E0075C672 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D20AC82665817E0075C672 /* ProfileHeaderView.xib */; };
 		18EAABC0265C1248002125FA /* ErrorPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAABBE265C1248002125FA /* ErrorPopUpController.swift */; };
 		18EAABC1265C1248002125FA /* ErrorPopUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAABBF265C1248002125FA /* ErrorPopUpController.xib */; };
 		18F41E93265AAADD00041D1B /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F41E91265AAADD00041D1B /* MessageController.swift */; };
@@ -92,7 +95,6 @@
 		1836FED026585493009055DD /* ChattyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1836FED326585493009055DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1836FED526585493009055DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1836FEDA26585493009055DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1836FEDC26585493009055DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1836FEDF26585493009055DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1836FEE126585493009055DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,11 +113,9 @@
 		186D4ACB265ADB1F0046389B /* SecondaryMessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryMessageBubble.swift; sourceTree = "<group>"; };
 		186D4ACC265ADB1F0046389B /* SecondaryMessageBubble.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryMessageBubble.xib; sourceTree = "<group>"; };
 		186D4AD1265B1B5F0046389B /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
-		1885DCC7265863020054133B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1885DCCF265865C40054133B /* InboxNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxNavigationController.swift; sourceTree = "<group>"; };
 		1885DCD12658750D0054133B /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		1885DCD3265878540054133B /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
-		1885DCD726587A170054133B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1885DCDD26589B5B0054133B /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
 		1885DCE02658A8520054133B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1885DCE22658AA1C0054133B /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
@@ -151,6 +151,12 @@
 		18BDE758265966DC00EB1726 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		18BDE75D2659ED8300EB1726 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		18D20AAC26642D4E0075C672 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		18D20AAE266570290075C672 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		18D20AB2266570960075C672 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		18D20ABD2665749C0075C672 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18D20ABE2665749C0075C672 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		18D20AC72665817E0075C672 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		18D20AC82665817E0075C672 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		18EAABBE265C1248002125FA /* ErrorPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopUpController.swift; sourceTree = "<group>"; };
 		18EAABBF265C1248002125FA /* ErrorPopUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopUpController.xib; sourceTree = "<group>"; };
 		18F41E91265AAADD00041D1B /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
@@ -319,10 +325,8 @@
 		1885DCC6265861770054133B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1836FED926585493009055DD /* Main.storyboard */,
-				1885DCC7265863020054133B /* MainTabBarController.swift */,
-				1885DCCF265865C40054133B /* InboxNavigationController.swift */,
-				1885DCD12658750D0054133B /* ProfileNavigationController.swift */,
+				18D20AB2266570960075C672 /* Main.storyboard */,
+				18D20AAE266570290075C672 /* MainTabBarController.swift */,
 				1885DCC92658652A0054133B /* Inbox */,
 				1885DCCC2658654B0054133B /* Profile */,
 			);
@@ -332,6 +336,7 @@
 		1885DCC92658652A0054133B /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
+				1885DCCF265865C40054133B /* InboxNavigationController.swift */,
 				1885DCD3265878540054133B /* InboxViewController.swift */,
 			);
 			path = Inbox;
@@ -340,7 +345,9 @@
 		1885DCCC2658654B0054133B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				1885DCD726587A170054133B /* ProfileViewController.swift */,
+				1885DCD12658750D0054133B /* ProfileNavigationController.swift */,
+				18D20ABE2665749C0075C672 /* ProfileViewController.xib */,
+				18D20ABD2665749C0075C672 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -367,6 +374,7 @@
 				18932DD8265D92EA005CE615 /* VerifyTextField.swift */,
 				18BA19BD265B37D300864082 /* PhoneTextField.swift */,
 				186D4AD1265B1B5F0046389B /* MaterialTextField.swift */,
+				18D20AB4266570D50075C672 /* ProfileHeaderView */,
 				18B2C8E3265A8D7F000850C0 /* MessageTextView */,
 				186D4AC5265AD5F70046389B /* PrimaryMessageBubble */,
 				186D4AC6265AD60B0046389B /* SecondaryMessageBubble */,
@@ -457,6 +465,15 @@
 				18BDE757265966DC00EB1726 /* SignUpViewController.swift */,
 			);
 			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		18D20AB4266570D50075C672 /* ProfileHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				18D20AC82665817E0075C672 /* ProfileHeaderView.xib */,
+				18D20AC72665817E0075C672 /* ProfileHeaderView.swift */,
+			);
+			path = ProfileHeaderView;
 			sourceTree = "<group>";
 		};
 		18DE4078265C04FC0097EED5 /* Error */ = {
@@ -599,18 +616,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D20AC02665749C0075C672 /* ProfileViewController.xib in Resources */,
 				1898290E265C5B4200A9422D /* OpeningViewController.xib in Resources */,
 				186D4ACE265ADB1F0046389B /* SecondaryMessageBubble.xib in Resources */,
 				18B2C8E5265A8D8F000850C0 /* MessageTextView.xib in Resources */,
 				18BDE74E26593FB300EB1726 /* Localizable.strings in Resources */,
 				1885DCE12658A8520054133B /* GoogleService-Info.plist in Resources */,
 				18EAABC1265C1248002125FA /* ErrorPopUpController.xib in Resources */,
+				18D20ACA2665817E0075C672 /* ProfileHeaderView.xib in Resources */,
 				186D4ACA265AD6770046389B /* PrimaryMessageBubble.xib in Resources */,
 				1836FEE026585493009055DD /* LaunchScreen.storyboard in Resources */,
 				1836FEDD26585493009055DD /* Assets.xcassets in Resources */,
-				1836FEDB26585493009055DD /* Main.storyboard in Resources */,
 				1860EA1A265EEE8D00DC69A9 /* GetNameViewController.xib in Resources */,
 				18982911265C7BAD00A9422D /* AuthKey_5N82GZ3RN2.p8 in Resources */,
+				18D20AB3266570960075C672 /* Main.storyboard in Resources */,
 				18F41E94265AAADD00041D1B /* MessageController.xib in Resources */,
 				18BDE75A265966DC00EB1726 /* SignUpViewController.xib in Resources */,
 				18982917265C832100A9422D /* VerifyViewController.xib in Resources */,
@@ -760,14 +779,14 @@
 				18F41E93265AAADD00041D1B /* MessageController.swift in Sources */,
 				18BDE75E2659ED8300EB1726 /* LogoView.swift in Sources */,
 				18AFB8862659386B000FEE1A /* UIView.swift in Sources */,
+				18D20ABF2665749C0075C672 /* ProfileViewController.swift in Sources */,
 				18932DEB265DD36F005CE615 /* Strings.swift in Sources */,
 				18982916265C832100A9422D /* VerifyViewController.swift in Sources */,
-				1885DCC8265863020054133B /* MainTabBarController.swift in Sources */,
 				1885DCD0265865C40054133B /* InboxNavigationController.swift in Sources */,
 				18932DE5265DC6D4005CE615 /* Date.swift in Sources */,
-				1885DCD826587A170054133B /* ProfileViewController.swift in Sources */,
 				18BDE759265966DC00EB1726 /* SignUpViewController.swift in Sources */,
 				1860EA1C265F531A00DC69A9 /* Username.swift in Sources */,
+				18D20AC92665817E0075C672 /* ProfileHeaderView.swift in Sources */,
 				18B2C8E2265A8D47000850C0 /* TextView.swift in Sources */,
 				1836FED626585493009055DD /* SceneDelegate.swift in Sources */,
 				18EAABC0265C1248002125FA /* ErrorPopUpController.swift in Sources */,
@@ -780,6 +799,7 @@
 				18932DE7265DC728005CE615 /* CurrentUser.swift in Sources */,
 				186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */,
 				18BDE7552659663100EB1726 /* LogInViewController.swift in Sources */,
+				18D20AB0266570290075C672 /* MainTabBarController.swift in Sources */,
 				1885DCD22658750D0054133B /* ProfileNavigationController.swift in Sources */,
 				1885DCDE26589B5B0054133B /* AuthNavigationController.swift in Sources */,
 				1885DCE32658AA1C0054133B /* Authenticator.swift in Sources */,
@@ -818,14 +838,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1836FED926585493009055DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1836FEDA26585493009055DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1836FEDE26585493009055DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
