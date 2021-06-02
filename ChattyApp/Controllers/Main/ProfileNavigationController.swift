@@ -12,10 +12,7 @@ class ProfileNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationBar.isHidden = true
-        self.navigationBar.isTranslucent = false
-        self.navigationBar.prefersLargeTitles = true
-        self.navigationBar.shadowImage = UIImage()
+        self.isNavigationBarHidden = true
         
         let viewController = ProfileViewController()
         self.viewControllers = [viewController]

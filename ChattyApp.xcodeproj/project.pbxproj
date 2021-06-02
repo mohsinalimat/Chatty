@@ -327,6 +327,7 @@
 			children = (
 				18D20AB2266570960075C672 /* Main.storyboard */,
 				18D20AAE266570290075C672 /* MainTabBarController.swift */,
+				1885DCD12658750D0054133B /* ProfileNavigationController.swift */,
 				1885DCC92658652A0054133B /* Inbox */,
 				1885DCCC2658654B0054133B /* Profile */,
 			);
@@ -345,7 +346,6 @@
 		1885DCCC2658654B0054133B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				1885DCD12658750D0054133B /* ProfileNavigationController.swift */,
 				18D20ABE2665749C0075C672 /* ProfileViewController.xib */,
 				18D20ABD2665749C0075C672 /* ProfileViewController.swift */,
 			);

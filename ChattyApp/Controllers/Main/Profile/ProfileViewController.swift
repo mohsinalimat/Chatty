@@ -19,8 +19,6 @@ class ProfileViewController: UITableViewController {
         
         self.tableView.alwaysBounceVertical = true
         
-        self.navigationItem.largeTitleDisplayMode = .never
-        
     }
     
     

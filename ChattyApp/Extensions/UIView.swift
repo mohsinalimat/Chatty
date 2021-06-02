@@ -17,6 +17,7 @@ extension UIView {
         }
         set(cornerRadius) {
             self.layer.cornerRadius = cornerRadius
+            self.layer.masksToBounds = true
         }
     }
     
@@ -27,6 +28,7 @@ extension UIView {
         }
         set(makeCircleCorners) {
             self.cornerRadius = makeCircleCorners ? self.frame.height / 2 : self.cornerRadius
+            self.layer.masksToBounds = true
         }
     }
     

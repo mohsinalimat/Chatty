@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileHeaderView: UIView {
     
+    @IBOutlet weak var primaryLabel: UILabel!
+    @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIView!
     
     private var contentView: UIView?
@@ -22,6 +24,16 @@ class ProfileHeaderView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.configure()
+    }
+    
+    
+    public func set(header text: String) {
+        self.primaryLabel.text = text
+    }
+
+    
+    public func set(subHeader text: String) {
+        self.primaryLabel.text = text
     }
     
     

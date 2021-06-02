@@ -23,6 +23,22 @@ class RoundedView: UIView {
 }
 
 @IBDesignable
+class RoundedLabel: UILabel {
+
+    @IBInspectable
+    override var cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+            self.layer.masksToBounds = true
+        }
+    }
+    
+}
+
+@IBDesignable
 class RoundedButton: UIButton {
 
     @IBInspectable
