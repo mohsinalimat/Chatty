@@ -2,6 +2,7 @@
 
 <h1>Chatty: Messaging App</h1>
 <p>Exploring the potential of a messaging app.</p>
+<p>***In early development stage. Check back here for more updates to come.***</p>
 
 <img src="https://github.com/KrisRJack/MyProjects/blob/main/ChattyApp_LaunchScreen.jpg" width="250px">&#160;
 <img src="https://github.com/KrisRJack/MyProjects/blob/main/ChattyApp_Opening.jpg" width="250px">&#160;
