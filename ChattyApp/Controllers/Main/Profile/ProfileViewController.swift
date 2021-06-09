@@ -19,6 +19,26 @@ class ProfileViewController: UITableViewController {
         
         self.tableView.alwaysBounceVertical = true
         
+        guard let userID = CurrentUser.uid else {
+            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(header: "[N/A]")
+            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(subHeader: "[N/A]")
+            return
+        }
+        
+        UserStore.firstObject(where: { $0.userID == userID }) { realmUser, error in
+            guard let firstName = realmUser?.firstName,
+                    let lastName = realmUser?.lastName,
+                    let username = realmUser?.username else {
+                (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(header: "[N/A]")
+                (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(subHeader: "[N/A]")
+                return
+            }
+            
+            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(subHeader: username)
+            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(header:  "\(firstName) \(lastName)")
+        }
+
+        
     }
     
     

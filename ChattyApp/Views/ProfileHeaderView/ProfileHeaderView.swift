@@ -33,7 +33,7 @@ class ProfileHeaderView: UIView {
 
     
     public func set(subHeader text: String) {
-        self.primaryLabel.text = text
+        self.secondaryLabel.text = "@" + text
     }
     
     

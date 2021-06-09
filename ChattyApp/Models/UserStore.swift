@@ -24,7 +24,7 @@ class UserStore: Object {
         return "userID"
     }
     
-    public func store(_ completion: @escaping (_ error: NSError) -> Void) {
+    public func store(_ completion: @escaping (_ error: NSError?) -> Void) {
         do {
             
             let realm = try Realm()
@@ -33,6 +33,7 @@ class UserStore: Object {
             }
             
             Logging.log(realm.configuration.fileURL ?? "", as: .info)
+            completion(nil)
             
         } catch {
             
