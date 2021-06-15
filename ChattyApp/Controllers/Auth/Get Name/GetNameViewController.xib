@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,7 +38,7 @@
                     <color key="textColor" name="SecondaryThemeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Zn-sl1" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4I-Zn-sl1" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="139.5" width="151" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -46,7 +46,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="John"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-Oo-7Xi" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-Oo-7Xi" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="213" y="139.5" width="151" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
@@ -54,12 +54,12 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Appleseed"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-6Y-dC5" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-6Y-dC5" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="211.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Username"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="John_Appleseed"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="john_appleseed"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp2-Xn-eDR">
@@ -79,7 +79,7 @@
                         <action selector="primaryButtonTapped:" destination="-1" eventType="touchUpInside" id="Jnu-iA-apU"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-yJ-keI" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-yJ-keI" customClass="MaterialTextField" customModule="ChattyApp" customModuleProvider="target">
                     <rect key="frame" x="50" y="283.5" width="314" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>

@@ -32,7 +32,7 @@ class AuthNavigationController: UINavigationController {
         
         self.navigationBar.tintColor = #colorLiteral(red: 0.2193171084, green: 0.4901946187, blue: 1, alpha: 1)
         self.view.backgroundColor = .white
-        self.navigationBar.isTranslucent = false
+        self.navigationBar.isTranslucent = true
         self.navigationBar.shadowImage = UIImage()
         
     }

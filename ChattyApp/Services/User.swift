@@ -19,6 +19,7 @@ class User: NSObject {
         case firstName = "firstName"
         case dateOfBirth = "dateOfBirth"
         case phoneNumber = "phoneNumber"
+        case profileCover = "profileCover"
         case profilePicture = "profilePicture"
     }
     

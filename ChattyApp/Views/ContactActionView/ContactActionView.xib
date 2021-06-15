@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactActionView" customModule="ChattyApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="D6e-v4-ruO">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSs-Oy-gLM">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="j62-wD-pUX"/>
+                        <constraint firstAttribute="width" secondItem="rSs-Oy-gLM" secondAttribute="height" multiplier="1:1" id="taU-Bw-zQo"/>
+                    </constraints>
+                    <color key="tintColor" name="PrimaryThemeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" cornerStyle="capsule">
+                        <imageReference key="image" image="message.fill" catalog="system" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        </preferredSymbolConfiguration>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="messageButtonPressed:" destination="-1" eventType="touchUpInside" id="fWb-wn-fXv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doN-Qp-pAU">
+                    <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                    <color key="tintColor" name="PrimaryThemeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" cornerStyle="capsule">
+                        <imageReference key="image" image="phone.fill" catalog="system" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        </preferredSymbolConfiguration>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="phoneButtonPressed:" destination="-1" eventType="touchUpInside" id="ONa-nL-ScB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y2-aZ-6WK">
+                    <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                    <color key="tintColor" name="PrimaryThemeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" cornerStyle="capsule">
+                        <imageReference key="image" image="video.fill" catalog="system" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        </preferredSymbolConfiguration>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="videoButtonPressed:" destination="-1" eventType="touchUpInside" id="HOG-Ar-ayX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oab-xr-0hQ">
+                    <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                    <color key="tintColor" name="PrimaryThemeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" cornerStyle="capsule">
+                        <imageReference key="image" image="envelope.fill" catalog="system" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        </preferredSymbolConfiguration>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="emailButtonPressed:" destination="-1" eventType="touchUpInside" id="ZRf-p9-AeJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDY-Rv-BW0">
+                    <rect key="frame" x="240" y="0.0" width="50" height="50"/>
+                    <color key="tintColor" name="PrimaryThemeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" cornerStyle="capsule">
+                        <imageReference key="image" image="ellipsis" catalog="system" renderingMode="template"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        </preferredSymbolConfiguration>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="moreButtonPressed:" destination="-1" eventType="touchUpInside" id="IQe-Am-a9Z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Ifv-vF-oUg"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HDY-Rv-BW0" firstAttribute="leading" secondItem="Oab-xr-0hQ" secondAttribute="trailing" constant="10" id="5dz-Sg-y6t"/>
+                <constraint firstItem="doN-Qp-pAU" firstAttribute="height" secondItem="rSs-Oy-gLM" secondAttribute="height" id="BoJ-DB-Mgt"/>
+                <constraint firstItem="rSs-Oy-gLM" firstAttribute="top" secondItem="D6e-v4-ruO" secondAttribute="top" id="CpZ-GU-53y"/>
+                <constraint firstItem="doN-Qp-pAU" firstAttribute="width" secondItem="rSs-Oy-gLM" secondAttribute="width" id="DuC-r2-s1x"/>
+                <constraint firstItem="1y2-aZ-6WK" firstAttribute="leading" secondItem="doN-Qp-pAU" secondAttribute="trailing" constant="10" id="HCG-bI-MLe"/>
+                <constraint firstItem="Oab-xr-0hQ" firstAttribute="width" secondItem="rSs-Oy-gLM" secondAttribute="width" id="Ju3-Wg-eOr"/>
+                <constraint firstItem="HDY-Rv-BW0" firstAttribute="height" secondItem="rSs-Oy-gLM" secondAttribute="height" id="P0u-az-LxS"/>
+                <constraint firstItem="1y2-aZ-6WK" firstAttribute="height" secondItem="rSs-Oy-gLM" secondAttribute="height" id="Q8b-ac-Kzc"/>
+                <constraint firstItem="HDY-Rv-BW0" firstAttribute="width" secondItem="rSs-Oy-gLM" secondAttribute="width" id="Wnl-FJ-Xoa"/>
+                <constraint firstItem="1y2-aZ-6WK" firstAttribute="centerX" secondItem="D6e-v4-ruO" secondAttribute="centerX" id="XNl-sZ-Ol2"/>
+                <constraint firstItem="rSs-Oy-gLM" firstAttribute="centerY" secondItem="D6e-v4-ruO" secondAttribute="centerY" id="Ysf-Uk-OOq"/>
+                <constraint firstItem="1y2-aZ-6WK" firstAttribute="width" secondItem="rSs-Oy-gLM" secondAttribute="width" id="Z0P-Qq-t4d"/>
+                <constraint firstItem="Oab-xr-0hQ" firstAttribute="height" secondItem="rSs-Oy-gLM" secondAttribute="height" id="cSx-lk-0br"/>
+                <constraint firstItem="Oab-xr-0hQ" firstAttribute="centerY" secondItem="rSs-Oy-gLM" secondAttribute="centerY" id="fHo-7r-ZyG"/>
+                <constraint firstItem="HDY-Rv-BW0" firstAttribute="centerY" secondItem="Oab-xr-0hQ" secondAttribute="centerY" id="kZE-lO-oCf"/>
+                <constraint firstItem="doN-Qp-pAU" firstAttribute="centerY" secondItem="rSs-Oy-gLM" secondAttribute="centerY" id="kdi-NH-0Ta"/>
+                <constraint firstItem="rSs-Oy-gLM" firstAttribute="leading" secondItem="D6e-v4-ruO" secondAttribute="leading" id="n3b-yz-aUU"/>
+                <constraint firstItem="1y2-aZ-6WK" firstAttribute="centerY" secondItem="rSs-Oy-gLM" secondAttribute="centerY" id="nmD-p2-9J3"/>
+                <constraint firstItem="Oab-xr-0hQ" firstAttribute="height" secondItem="rSs-Oy-gLM" secondAttribute="height" id="oet-Dm-iU3"/>
+                <constraint firstItem="Oab-xr-0hQ" firstAttribute="leading" secondItem="1y2-aZ-6WK" secondAttribute="trailing" constant="10" id="uvx-W2-bKb"/>
+                <constraint firstItem="doN-Qp-pAU" firstAttribute="leading" secondItem="rSs-Oy-gLM" secondAttribute="trailing" constant="10" id="zG4-6z-gZ4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-194.20289855072465" y="-272.54464285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="video.fill" catalog="system" width="128" height="82"/>
+        <namedColor name="PrimaryThemeColor">
+            <color red="0.29100000858306885" green="0.48399999737739563" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

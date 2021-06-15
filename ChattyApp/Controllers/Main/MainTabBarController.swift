@@ -15,8 +15,6 @@ class MainTabBarController: UITabBarController {
         // Configure tabbar appearance
         let appearance = tabBar.standardAppearance
         appearance.backgroundColor = .white
-        appearance.stackedLayoutAppearance.normal.iconColor = .systemGray2
-        appearance.stackedLayoutAppearance.selected.iconColor = UIColor(named: "SelectedTabBarIconColor")
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.tabBar.standardAppearance = appearance
@@ -26,17 +24,25 @@ class MainTabBarController: UITabBarController {
         self.tabBar.layer.borderWidth = 0.2
         self.tabBar.layer.borderColor = UIColor.separator.cgColor
         
+        let unselectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: .black)
+        let selectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: #colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1))
         
         let inboxNavigationController = InboxNavigationController()
         inboxNavigationController.tabBarItem = UITabBarItem(title: nil,
-                                                            image: UIImage(systemName: "bubble.left.and.bubble.right.fill"),
-                                                            selectedImage: UIImage(systemName: "bubble.left.and.bubble.right.fill"))
+                                                            image: UIImage(systemName: "bubble.left.and.bubble.right.fill")?
+                                                                .withConfiguration(unselectedConfiguration),
+                                                            selectedImage: UIImage(systemName: "bubble.left.and.bubble.right.fill")?
+                                                                .withConfiguration(selectedConfiguration)
+        )
         
         
         let profileNavigationController = ProfileNavigationController()
         profileNavigationController.tabBarItem = UITabBarItem(title: nil,
-                                                            image: UIImage(systemName: "person.fill"),
-                                                            selectedImage: UIImage(systemName: "person.fill"))
+                                                              image: UIImage(systemName: "person.fill")?
+                                                                .withConfiguration(unselectedConfiguration),
+                                                              selectedImage: UIImage(systemName: "person.fill")?
+                                                                .withConfiguration(selectedConfiguration)
+        )
         
         
         self.viewControllers = [inboxNavigationController, profileNavigationController]

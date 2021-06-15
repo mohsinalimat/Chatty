@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181836D926783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181836D826783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift */; };
 		1836FED426585493009055DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FED326585493009055DD /* AppDelegate.swift */; };
 		1836FED626585493009055DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836FED526585493009055DD /* SceneDelegate.swift */; };
 		1836FEDD26585493009055DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1836FEDC26585493009055DD /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		1885DCDE26589B5B0054133B /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCDD26589B5B0054133B /* AuthNavigationController.swift */; };
 		1885DCE12658A8520054133B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1885DCE02658A8520054133B /* GoogleService-Info.plist */; };
 		1885DCE32658AA1C0054133B /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCE22658AA1C0054133B /* Authenticator.swift */; };
+		18865C42267527C600F49E2C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18865C41267527C600F49E2C /* UIImageView.swift */; };
 		18932DD9265D92EA005CE615 /* VerifyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932DD8265D92EA005CE615 /* VerifyTextField.swift */; };
 		18932DDB265DB115005CE615 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932DDA265DB115005CE615 /* User.swift */; };
 		18932DDD265DB5BF005CE615 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932DDC265DB5BF005CE615 /* Dictionary.swift */; };
@@ -44,6 +46,7 @@
 		189A1FEB266420D50016DA31 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A1FEA266420D50016DA31 /* UserStore.swift */; };
 		189A1FED26642BE60016DA31 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A1FEC26642BE60016DA31 /* Logging.swift */; };
 		189F8E05265A95FE004EA3EE /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F8E04265A95FE004EA3EE /* RoundedView.swift */; };
+		18AD373226738D57000602E2 /* UserImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD373126738D57000602E2 /* UserImageType.swift */; };
 		18AFB8862659386B000FEE1A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB8852659386B000FEE1A /* UIView.swift */; };
 		18B2C8E2265A8D47000850C0 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2C8E1265A8D47000850C0 /* TextView.swift */; };
 		18B2C8E5265A8D8F000850C0 /* MessageTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2C8E4265A8D8F000850C0 /* MessageTextView.xib */; };
@@ -65,6 +68,10 @@
 		18D20AC02665749C0075C672 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D20ABE2665749C0075C672 /* ProfileViewController.xib */; };
 		18D20AC92665817E0075C672 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AC72665817E0075C672 /* ProfileHeaderView.swift */; };
 		18D20ACA2665817E0075C672 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D20AC82665817E0075C672 /* ProfileHeaderView.xib */; };
+		18DEE32D26777A46009C2F2D /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEE32C26777A46009C2F2D /* ContactCardView.swift */; };
+		18DEE32F26777A5B009C2F2D /* ContactCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DEE32E26777A5B009C2F2D /* ContactCardView.xib */; };
+		18DEE33226777E49009C2F2D /* ContactActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DEE33126777E49009C2F2D /* ContactActionView.xib */; };
+		18DEE33426777E53009C2F2D /* ContactActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEE33326777E53009C2F2D /* ContactActionView.swift */; };
 		18EAABC0265C1248002125FA /* ErrorPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAABBE265C1248002125FA /* ErrorPopUpController.swift */; };
 		18EAABC1265C1248002125FA /* ErrorPopUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAABBF265C1248002125FA /* ErrorPopUpController.xib */; };
 		18F41E93265AAADD00041D1B /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F41E91265AAADD00041D1B /* MessageController.swift */; };
@@ -92,6 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181836D826783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileController+PHPickerViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		1836FED026585493009055DD /* ChattyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1836FED326585493009055DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1836FED526585493009055DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 		1885DCDD26589B5B0054133B /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
 		1885DCE02658A8520054133B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1885DCE22658AA1C0054133B /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		18865C41267527C600F49E2C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		18932DD8265D92EA005CE615 /* VerifyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTextField.swift; sourceTree = "<group>"; };
 		18932DDA265DB115005CE615 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		18932DDC265DB5BF005CE615 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -136,6 +145,7 @@
 		189A1FEA266420D50016DA31 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		189A1FEC26642BE60016DA31 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		189F8E04265A95FE004EA3EE /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		18AD373126738D57000602E2 /* UserImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageType.swift; sourceTree = "<group>"; };
 		18AFB8852659386B000FEE1A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		18B2C8E1265A8D47000850C0 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		18B2C8E4265A8D8F000850C0 /* MessageTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTextView.xib; sourceTree = "<group>"; };
@@ -157,6 +167,10 @@
 		18D20ABE2665749C0075C672 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		18D20AC72665817E0075C672 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		18D20AC82665817E0075C672 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		18DEE32C26777A46009C2F2D /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		18DEE32E26777A5B009C2F2D /* ContactCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCardView.xib; sourceTree = "<group>"; };
+		18DEE33126777E49009C2F2D /* ContactActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactActionView.xib; sourceTree = "<group>"; };
+		18DEE33326777E53009C2F2D /* ContactActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionView.swift; sourceTree = "<group>"; };
 		18EAABBE265C1248002125FA /* ErrorPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopUpController.swift; sourceTree = "<group>"; };
 		18EAABBF265C1248002125FA /* ErrorPopUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopUpController.xib; sourceTree = "<group>"; };
 		18F41E91265AAADD00041D1B /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
@@ -200,6 +214,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181836D726780F4900F71486 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18D20AC82665817E0075C672 /* ProfileHeaderView.xib */,
+				18D20AC72665817E0075C672 /* ProfileHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1836FEC726585492009055DD = {
 			isa = PBXGroup;
 			children = (
@@ -346,8 +369,10 @@
 		1885DCCC2658654B0054133B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				181836D726780F4900F71486 /* Views */,
 				18D20ABE2665749C0075C672 /* ProfileViewController.xib */,
 				18D20ABD2665749C0075C672 /* ProfileViewController.swift */,
+				181836D826783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -374,7 +399,8 @@
 				18932DD8265D92EA005CE615 /* VerifyTextField.swift */,
 				18BA19BD265B37D300864082 /* PhoneTextField.swift */,
 				186D4AD1265B1B5F0046389B /* MaterialTextField.swift */,
-				18D20AB4266570D50075C672 /* ProfileHeaderView */,
+				18DEE33026777E13009C2F2D /* ContactActionView */,
+				18DEE32B26777A0E009C2F2D /* ContactCardView */,
 				18B2C8E3265A8D7F000850C0 /* MessageTextView */,
 				186D4AC5265AD5F70046389B /* PrimaryMessageBubble */,
 				186D4AC6265AD60B0046389B /* SecondaryMessageBubble */,
@@ -412,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				189A1FEA266420D50016DA31 /* UserStore.swift */,
+				18AD373126738D57000602E2 /* UserImageType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -434,6 +461,7 @@
 				18D20AAC26642D4E0075C672 /* String.swift */,
 				18BDE74F265940FD00EB1726 /* UIColor.swift */,
 				18932DDC265DB5BF005CE615 /* Dictionary.swift */,
+				18865C41267527C600F49E2C /* UIImageView.swift */,
 				18932DE8265DD0DA005CE615 /* ViewController.swift */,
 				18BDE7512659443700EB1726 /* NSMutableAttributedString.swift */,
 			);
@@ -467,15 +495,6 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
-		18D20AB4266570D50075C672 /* ProfileHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				18D20AC82665817E0075C672 /* ProfileHeaderView.xib */,
-				18D20AC72665817E0075C672 /* ProfileHeaderView.swift */,
-			);
-			path = ProfileHeaderView;
-			sourceTree = "<group>";
-		};
 		18DE4078265C04FC0097EED5 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +502,24 @@
 				18EAABBE265C1248002125FA /* ErrorPopUpController.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		18DEE32B26777A0E009C2F2D /* ContactCardView */ = {
+			isa = PBXGroup;
+			children = (
+				18DEE32E26777A5B009C2F2D /* ContactCardView.xib */,
+				18DEE32C26777A46009C2F2D /* ContactCardView.swift */,
+			);
+			path = ContactCardView;
+			sourceTree = "<group>";
+		};
+		18DEE33026777E13009C2F2D /* ContactActionView */ = {
+			isa = PBXGroup;
+			children = (
+				18DEE33126777E49009C2F2D /* ContactActionView.xib */,
+				18DEE33326777E53009C2F2D /* ContactActionView.swift */,
+			);
+			path = ContactActionView;
 			sourceTree = "<group>";
 		};
 		316D32398FD233DC2504B0CB /* Frameworks */ = {
@@ -627,7 +664,9 @@
 				186D4ACA265AD6770046389B /* PrimaryMessageBubble.xib in Resources */,
 				1836FEE026585493009055DD /* LaunchScreen.storyboard in Resources */,
 				1836FEDD26585493009055DD /* Assets.xcassets in Resources */,
+				18DEE33226777E49009C2F2D /* ContactActionView.xib in Resources */,
 				1860EA1A265EEE8D00DC69A9 /* GetNameViewController.xib in Resources */,
+				18DEE32F26777A5B009C2F2D /* ContactCardView.xib in Resources */,
 				18982911265C7BAD00A9422D /* AuthKey_5N82GZ3RN2.p8 in Resources */,
 				18D20AB3266570960075C672 /* Main.storyboard in Resources */,
 				18F41E94265AAADD00041D1B /* MessageController.xib in Resources */,
@@ -762,11 +801,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				189F8E05265A95FE004EA3EE /* RoundedView.swift in Sources */,
+				18865C42267527C600F49E2C /* UIImageView.swift in Sources */,
 				1836FED426585493009055DD /* AppDelegate.swift in Sources */,
 				18D20AAD26642D4E0075C672 /* String.swift in Sources */,
 				18932DD9265D92EA005CE615 /* VerifyTextField.swift in Sources */,
 				186D4AC4265AAD930046389B /* Window.swift in Sources */,
 				18932DDB265DB115005CE615 /* User.swift in Sources */,
+				18DEE32D26777A46009C2F2D /* ContactCardView.swift in Sources */,
 				18B2C8E7265A8D99000850C0 /* MessageTextView.swift in Sources */,
 				18BA19C0265B39DC00864082 /* Vibrations.swift in Sources */,
 				186D4AC9265AD6770046389B /* PrimaryMessageBubble.swift in Sources */,
@@ -793,14 +834,17 @@
 				18932DE9265DD0DA005CE615 /* ViewController.swift in Sources */,
 				18932DE1265DC435005CE615 /* Error.swift in Sources */,
 				18BA19BE265B37D300864082 /* PhoneTextField.swift in Sources */,
+				181836D926783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift in Sources */,
 				189A1FED26642BE60016DA31 /* Logging.swift in Sources */,
 				1860EA19265EEE8D00DC69A9 /* GetNameViewController.swift in Sources */,
 				186D4AD2265B1B5F0046389B /* MaterialTextField.swift in Sources */,
 				18932DE7265DC728005CE615 /* CurrentUser.swift in Sources */,
+				18DEE33426777E53009C2F2D /* ContactActionView.swift in Sources */,
 				186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */,
 				18BDE7552659663100EB1726 /* LogInViewController.swift in Sources */,
 				18D20AB0266570290075C672 /* MainTabBarController.swift in Sources */,
 				1885DCD22658750D0054133B /* ProfileNavigationController.swift in Sources */,
+				18AD373226738D57000602E2 /* UserImageType.swift in Sources */,
 				1885DCDE26589B5B0054133B /* AuthNavigationController.swift in Sources */,
 				1885DCE32658AA1C0054133B /* Authenticator.swift in Sources */,
 			);
@@ -975,7 +1019,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = ChattyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -997,7 +1041,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FW36D52GL8;
 				INFOPLIST_FILE = ChattyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

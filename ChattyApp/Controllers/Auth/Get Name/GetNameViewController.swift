@@ -63,6 +63,7 @@ class GetNameViewController: UIViewController {
         self.usernameTextField.textField.tag = 2
         self.usernameTextField.textField.delegate = self
         self.usernameTextField.autoCapitalization = .none
+        self.usernameTextField.textField.autocorrectionType = .no
         self.usernameTextField.textField.keyboardType = .alphabet
         self.usernameTextField.textField.textContentType = .username
         

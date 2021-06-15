@@ -93,9 +93,9 @@ class Username: NSObject {
         let validChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-."
         let characterset = CharacterSet(charactersIn: validChar)
         return !(self.username.isEmpty)
-            || !(self.username.count < 5)
-            || !(self.username.count > 20)
-            || !((self.username.rangeOfCharacter(from: characterset.inverted) != nil))
+            && !(self.username.count < 5)
+            && !(self.username.count > 20)
+            && !((self.username.rangeOfCharacter(from: characterset.inverted) != nil))
     }
     
 }

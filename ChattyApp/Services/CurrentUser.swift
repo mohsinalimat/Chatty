@@ -102,6 +102,7 @@ class CurrentUser: NSObject {
             user.firstName = snapshot.data()?[User.DataTypes.firstName.rawValue] as? String
             user.lastName = snapshot.data()?[User.DataTypes.lastName.rawValue] as? String
             user.phoneNumber = snapshot.data()?[User.DataTypes.phoneNumber.rawValue] as? String
+            user.profileCover = snapshot.data()?[User.DataTypes.profileCover.rawValue] as? String
             user.profilePicture = snapshot.data()?[User.DataTypes.profilePicture.rawValue] as? String
             user.created = (snapshot.data()?[User.DataTypes.created.rawValue] as? Timestamp)?.dateValue()
             user.dateOfBirth = (snapshot.data()?[User.DataTypes.dateOfBirth.rawValue] as? Timestamp)?.dateValue()
@@ -111,4 +112,50 @@ class CurrentUser: NSObject {
             }
         }
     }
+    
+    
+    static public func updateImage(for imageType: UserImageType, withImageFrom localPath: URL, _ completion: @escaping (_ error: NSError?) -> Void) {
+        
+        guard let userID = self.uid else {
+            completion(self.invalidOperationError)
+            return
+        }
+        
+        self.storeImage(for: imageType, from: localPath) { imageName, error in
+            if let error = error {
+                completion(error.asNSError)
+                return
+            }
+            
+            User(withID: userID).set([
+                
+                (imageType == .profile) ? .profilePicture : .profileCover: imageName as Any
+                
+            ]) { error in completion(error) }
+        }
+        
+    }
+    
+    
+    // MARK: - PRIVATE
+    
+
+    static private func storeImage(for imageType: UserImageType, from url: URL, _ completion: @escaping (_ imageName: String?, _ error: NSError?) -> Void) {
+        
+        guard let _ = self.uid else {
+            completion(nil, self.invalidOperationError)
+            return
+        }
+        
+        let isolatedPath = url.path.components(separatedBy: "/")
+        let ref = Storage.storage().reference(withPath: "profileImages")
+            .child(isolatedPath.last ?? "")
+        
+        ref.putFile(from: url, metadata: nil) { (metadata, error) in
+            completion(isolatedPath.last ?? "", error?.asNSError)
+            return
+        }
+        
+    }
+    
 }

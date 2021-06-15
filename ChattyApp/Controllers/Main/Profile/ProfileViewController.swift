@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import PhotosUI
+import AVFoundation
 
 class ProfileViewController: UITableViewController {
+    
+    internal var setImageOfType: UserImageType = .profile
     
     convenience init() {
         self.init(nibName: String(describing: ProfileViewController.self), bundle: nil)
@@ -19,25 +23,17 @@ class ProfileViewController: UITableViewController {
         
         self.tableView.alwaysBounceVertical = true
         
-        guard let userID = CurrentUser.uid else {
-            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(header: "[N/A]")
-            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(subHeader: "[N/A]")
-            return
-        }
+        self.updateTableViewHeader()
         
-        UserStore.firstObject(where: { $0.userID == userID }) { realmUser, error in
-            guard let firstName = realmUser?.firstName,
-                    let lastName = realmUser?.lastName,
-                    let username = realmUser?.username else {
-                (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(header: "[N/A]")
-                (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(subHeader: "[N/A]")
-                return
-            }
-            
-            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(subHeader: username)
-            (self.tableView.tableHeaderView as? ProfileHeaderView)?.set(header:  "\(firstName) \(lastName)")
+        (self.tableView.tableHeaderView as? ProfileHeaderView)?.profileImageTapped = {
+            self.setImageOfType = .profile
+            self.presentPHPickerViewController()
         }
 
+        (self.tableView.tableHeaderView as? ProfileHeaderView)?.coverImageTapped = {
+            self.setImageOfType = .cover
+            self.presentPHPickerViewController()
+        }
         
     }
     
@@ -45,6 +41,17 @@ class ProfileViewController: UITableViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.makeDynamicHeaderView()
+    }
+    
+    
+    private func presentPHPickerViewController() {
+        var configuration = PHPickerConfiguration()
+        configuration.filter = .images
+        configuration.selectionLimit = 1
+        
+        let pickerViewController = PHPickerViewController(configuration: configuration)
+        pickerViewController.delegate = self
+        self.present(pickerViewController, animated: true, completion: nil)
     }
     
     
@@ -59,6 +66,18 @@ class ProfileViewController: UITableViewController {
             headerView.frame.size.height = size.height
             tableView.tableHeaderView = headerView
             tableView.layoutIfNeeded()
+        }
+    }
+    
+    
+    internal func updateTableViewHeader() {
+        guard let userID = CurrentUser.uid else {
+            (self.tableView.tableHeaderView as? ProfileHeaderView)?.displayData(for: nil)
+            return
+        }
+        
+        UserStore.firstObject(where: { $0.userID == userID }) { realmUser, error in
+            (self.tableView.tableHeaderView as? ProfileHeaderView)?.displayData(for: realmUser)
         }
     }
 

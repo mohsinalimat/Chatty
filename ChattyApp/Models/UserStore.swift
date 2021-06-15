@@ -14,6 +14,7 @@ class UserStore: Object {
     @objc dynamic var lastName: String?
     @objc dynamic var username: String?
     @objc dynamic var phoneNumber: String?
+    @objc dynamic var profileCover: String?
     @objc dynamic var profilePicture: String?
     
     @objc dynamic var created: Date?
