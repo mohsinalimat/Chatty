@@ -46,6 +46,8 @@
 		189A1FEB266420D50016DA31 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A1FEA266420D50016DA31 /* UserStore.swift */; };
 		189A1FED26642BE60016DA31 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A1FEC26642BE60016DA31 /* Logging.swift */; };
 		189F8E05265A95FE004EA3EE /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F8E04265A95FE004EA3EE /* RoundedView.swift */; };
+		18A7A8CD2678D93D00EC2D09 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7A8CB2678D93D00EC2D09 /* ProfileViewController.swift */; };
+		18A7A8CE2678D93D00EC2D09 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A7A8CC2678D93D00EC2D09 /* ProfileViewController.xib */; };
 		18AD373226738D57000602E2 /* UserImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD373126738D57000602E2 /* UserImageType.swift */; };
 		18AFB8862659386B000FEE1A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB8852659386B000FEE1A /* UIView.swift */; };
 		18B2C8E2265A8D47000850C0 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2C8E1265A8D47000850C0 /* TextView.swift */; };
@@ -64,8 +66,6 @@
 		18D20AAD26642D4E0075C672 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AAC26642D4E0075C672 /* String.swift */; };
 		18D20AB0266570290075C672 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AAE266570290075C672 /* MainTabBarController.swift */; };
 		18D20AB3266570960075C672 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D20AB2266570960075C672 /* Main.storyboard */; };
-		18D20ABF2665749C0075C672 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20ABD2665749C0075C672 /* ProfileViewController.swift */; };
-		18D20AC02665749C0075C672 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D20ABE2665749C0075C672 /* ProfileViewController.xib */; };
 		18D20AC92665817E0075C672 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D20AC72665817E0075C672 /* ProfileHeaderView.swift */; };
 		18D20ACA2665817E0075C672 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D20AC82665817E0075C672 /* ProfileHeaderView.xib */; };
 		18DEE32D26777A46009C2F2D /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEE32C26777A46009C2F2D /* ContactCardView.swift */; };
@@ -74,6 +74,7 @@
 		18DEE33426777E53009C2F2D /* ContactActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DEE33326777E53009C2F2D /* ContactActionView.swift */; };
 		18EAABC0265C1248002125FA /* ErrorPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAABBE265C1248002125FA /* ErrorPopUpController.swift */; };
 		18EAABC1265C1248002125FA /* ErrorPopUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EAABBF265C1248002125FA /* ErrorPopUpController.xib */; };
+		18EDD396267843A70054C84F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDD395267843A70054C84F /* Settings.swift */; };
 		18F41E93265AAADD00041D1B /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F41E91265AAADD00041D1B /* MessageController.swift */; };
 		18F41E94265AAADD00041D1B /* MessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F41E92265AAADD00041D1B /* MessageController.xib */; };
 		74A24CF185D46E7C0269DB8A /* Pods_ChattyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A053A6DFE23E5807E5BC24 /* Pods_ChattyAppTests.framework */; };
@@ -145,6 +146,8 @@
 		189A1FEA266420D50016DA31 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		189A1FEC26642BE60016DA31 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		189F8E04265A95FE004EA3EE /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		18A7A8CB2678D93D00EC2D09 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18A7A8CC2678D93D00EC2D09 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		18AD373126738D57000602E2 /* UserImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageType.swift; sourceTree = "<group>"; };
 		18AFB8852659386B000FEE1A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		18B2C8E1265A8D47000850C0 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
@@ -163,8 +166,6 @@
 		18D20AAC26642D4E0075C672 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		18D20AAE266570290075C672 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		18D20AB2266570960075C672 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		18D20ABD2665749C0075C672 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		18D20ABE2665749C0075C672 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		18D20AC72665817E0075C672 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		18D20AC82665817E0075C672 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		18DEE32C26777A46009C2F2D /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		18DEE33326777E53009C2F2D /* ContactActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionView.swift; sourceTree = "<group>"; };
 		18EAABBE265C1248002125FA /* ErrorPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopUpController.swift; sourceTree = "<group>"; };
 		18EAABBF265C1248002125FA /* ErrorPopUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopUpController.xib; sourceTree = "<group>"; };
+		18EDD395267843A70054C84F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		18F41E91265AAADD00041D1B /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		18F41E92265AAADD00041D1B /* MessageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageController.xib; sourceTree = "<group>"; };
 		39D69A16565861A1FE1F6A05 /* Pods-ChattyApp-ChattyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyApp-ChattyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChattyApp-ChattyAppUITests/Pods-ChattyApp-ChattyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -350,7 +352,6 @@
 			children = (
 				18D20AB2266570960075C672 /* Main.storyboard */,
 				18D20AAE266570290075C672 /* MainTabBarController.swift */,
-				1885DCD12658750D0054133B /* ProfileNavigationController.swift */,
 				1885DCC92658652A0054133B /* Inbox */,
 				1885DCCC2658654B0054133B /* Profile */,
 			);
@@ -370,8 +371,9 @@
 			isa = PBXGroup;
 			children = (
 				181836D726780F4900F71486 /* Views */,
-				18D20ABE2665749C0075C672 /* ProfileViewController.xib */,
-				18D20ABD2665749C0075C672 /* ProfileViewController.swift */,
+				18A7A8CC2678D93D00EC2D09 /* ProfileViewController.xib */,
+				1885DCD12658750D0054133B /* ProfileNavigationController.swift */,
+				18A7A8CB2678D93D00EC2D09 /* ProfileViewController.swift */,
 				181836D826783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift */,
 			);
 			path = Profile;
@@ -437,6 +439,7 @@
 		189A1FE9266420730016DA31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				18EDD395267843A70054C84F /* Settings.swift */,
 				189A1FEA266420D50016DA31 /* UserStore.swift */,
 				18AD373126738D57000602E2 /* UserImageType.swift */,
 			);
@@ -653,7 +656,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D20AC02665749C0075C672 /* ProfileViewController.xib in Resources */,
+				18A7A8CE2678D93D00EC2D09 /* ProfileViewController.xib in Resources */,
 				1898290E265C5B4200A9422D /* OpeningViewController.xib in Resources */,
 				186D4ACE265ADB1F0046389B /* SecondaryMessageBubble.xib in Resources */,
 				18B2C8E5265A8D8F000850C0 /* MessageTextView.xib in Resources */,
@@ -820,7 +823,6 @@
 				18F41E93265AAADD00041D1B /* MessageController.swift in Sources */,
 				18BDE75E2659ED8300EB1726 /* LogoView.swift in Sources */,
 				18AFB8862659386B000FEE1A /* UIView.swift in Sources */,
-				18D20ABF2665749C0075C672 /* ProfileViewController.swift in Sources */,
 				18932DEB265DD36F005CE615 /* Strings.swift in Sources */,
 				18982916265C832100A9422D /* VerifyViewController.swift in Sources */,
 				1885DCD0265865C40054133B /* InboxNavigationController.swift in Sources */,
@@ -832,6 +834,7 @@
 				1836FED626585493009055DD /* SceneDelegate.swift in Sources */,
 				18EAABC0265C1248002125FA /* ErrorPopUpController.swift in Sources */,
 				18932DE9265DD0DA005CE615 /* ViewController.swift in Sources */,
+				18A7A8CD2678D93D00EC2D09 /* ProfileViewController.swift in Sources */,
 				18932DE1265DC435005CE615 /* Error.swift in Sources */,
 				18BA19BE265B37D300864082 /* PhoneTextField.swift in Sources */,
 				181836D926783A4B00F71486 /* ProfileController+PHPickerViewControllerDelegate.swift in Sources */,
@@ -842,6 +845,7 @@
 				18DEE33426777E53009C2F2D /* ContactActionView.swift in Sources */,
 				186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */,
 				18BDE7552659663100EB1726 /* LogInViewController.swift in Sources */,
+				18EDD396267843A70054C84F /* Settings.swift in Sources */,
 				18D20AB0266570290075C672 /* MainTabBarController.swift in Sources */,
 				1885DCD22658750D0054133B /* ProfileNavigationController.swift in Sources */,
 				18AD373226738D57000602E2 /* UserImageType.swift in Sources */,

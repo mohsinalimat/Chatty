@@ -19,16 +19,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rla-ot-Pud" customClass="ContactCardView" customModule="ChattyApp" customModuleProvider="target">
-                    <rect key="frame" x="20" y="12" width="374" height="526"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="NO"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
+                    <rect key="frame" x="12" y="0.0" width="390" height="557"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxL-XC-vEr">
-                    <rect key="frame" x="20" y="538" width="374" height="1"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxL-XC-vEr">
+                    <rect key="frame" x="12" y="557" width="390" height="1"/>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="A5S-wa-SpP"/>
@@ -38,13 +32,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Rla-ot-Pud" secondAttribute="bottom" constant="20" id="0vR-VC-knR"/>
-                <constraint firstItem="Rla-ot-Pud" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="EOf-5h-cdy"/>
+                <constraint firstItem="Rla-ot-Pud" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="EOf-5h-cdy"/>
                 <constraint firstItem="fxL-XC-vEr" firstAttribute="top" secondItem="Rla-ot-Pud" secondAttribute="bottom" id="KRl-xf-KIX"/>
                 <constraint firstItem="Rla-ot-Pud" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NDn-pj-Hx2"/>
                 <constraint firstItem="fxL-XC-vEr" firstAttribute="width" secondItem="Rla-ot-Pud" secondAttribute="width" id="cu1-De-J0u"/>
                 <constraint firstItem="fxL-XC-vEr" firstAttribute="centerX" secondItem="Rla-ot-Pud" secondAttribute="centerX" id="iBg-f5-h1a"/>
-                <constraint firstItem="Rla-ot-Pud" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="jbM-1t-DDF"/>
+                <constraint firstItem="Rla-ot-Pud" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jbM-1t-DDF"/>
+                <constraint firstAttribute="bottom" secondItem="fxL-XC-vEr" secondAttribute="bottom" id="tvB-d4-wgs"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="169.56521739130437" y="-66.964285714285708"/>

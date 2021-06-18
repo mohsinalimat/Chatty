@@ -52,9 +52,9 @@ class ProfileHeaderView: UIView {
         self.addNibViewToContentView()
         
         self.contactCardView.layer.cornerRadius = 20
-        self.contactCardView.addShadow(shadowRadius: 5,
+        self.contactCardView.addShadow(shadowRadius: 1,
                                        shadowOpacity: 1,
-                                       shadowColor: UIColor.separator.cgColor,
+                                       shadowColor: UIColor.black.cgColor,
                                        shadowOffset: CGSize(width: 0, height: 0))
     
         self.contactCardView.moreButtonAction = ({ self.moreButtonAction?($0) })

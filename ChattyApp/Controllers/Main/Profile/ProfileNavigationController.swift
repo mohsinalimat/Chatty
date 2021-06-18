@@ -17,6 +17,10 @@ class ProfileNavigationController: UINavigationController {
         let viewController = ProfileViewController()
         self.viewControllers = [viewController]
         
+        let view = UIView()
+        view.backgroundColor = .white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
     }
     
 

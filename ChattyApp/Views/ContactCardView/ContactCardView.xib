@@ -24,7 +24,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="GDr-KA-cEf">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="543"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-xW-mCv">
@@ -159,25 +159,25 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[DISPLAY_NAME]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPu-zj-l0S">
-                    <rect key="frame" x="0.0" y="298" width="414" height="33.5"/>
+                    <rect key="frame" x="0.0" y="302" width="414" height="33.5"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@[USERNAME]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBj-4C-ssI">
-                    <rect key="frame" x="0.0" y="333.5" width="414" height="21.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <rect key="frame" x="0.0" y="337.5" width="414" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passionate developer with a love for coding and an interest in the technologies of tomorrow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-Ir-bxD">
-                    <rect key="frame" x="0.0" y="365" width="414" height="43"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passionate developer with a love for coding and an interest in developing the technologies of tomorrow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-Ir-bxD">
+                    <rect key="frame" x="15" y="373.5" width="384" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" systemColor="secondaryLabelColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-IC-bDP" customClass="ContactActionView" customModule="ChattyApp" customModuleProvider="target">
-                    <rect key="frame" x="62" y="420" width="290" height="50"/>
+                    <rect key="frame" x="62" y="454.5" width="290" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="NO"/>
@@ -194,24 +194,24 @@
                 <constraint firstItem="oBj-4C-ssI" firstAttribute="top" secondItem="ZPu-zj-l0S" secondAttribute="bottom" constant="2" id="C8Q-IS-n3b"/>
                 <constraint firstItem="FPt-Ir-bxD" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="Duk-qU-Ie0"/>
                 <constraint firstItem="oBj-4C-ssI" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="FK9-Xp-y4k"/>
-                <constraint firstItem="FPt-Ir-bxD" firstAttribute="leading" secondItem="ZPu-zj-l0S" secondAttribute="leading" id="GOW-Jc-edp"/>
-                <constraint firstItem="FPt-Ir-bxD" firstAttribute="top" secondItem="oBj-4C-ssI" secondAttribute="bottom" constant="10" id="OCW-al-kKM"/>
+                <constraint firstItem="FPt-Ir-bxD" firstAttribute="leading" secondItem="ZPu-zj-l0S" secondAttribute="leading" constant="15" id="GOW-Jc-edp"/>
+                <constraint firstItem="FPt-Ir-bxD" firstAttribute="top" secondItem="oBj-4C-ssI" secondAttribute="bottom" constant="12" id="OCW-al-kKM"/>
                 <constraint firstItem="ZPu-zj-l0S" firstAttribute="leading" secondItem="fzY-xW-mCv" secondAttribute="leading" id="QK8-ef-WA7"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="top" secondItem="GDr-KA-cEf" secondAttribute="top" id="e2o-QF-VTX"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="fgM-If-MQX"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sTL-IC-bDP" secondAttribute="bottom" constant="20" id="hwa-Z4-Qqh"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sTL-IC-bDP" secondAttribute="bottom" id="hwa-Z4-Qqh"/>
                 <constraint firstItem="oBj-4C-ssI" firstAttribute="leading" secondItem="ZPu-zj-l0S" secondAttribute="leading" id="ibN-lw-muE"/>
                 <constraint firstItem="sTL-IC-bDP" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="jS1-ep-vBa"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="jxt-hw-G4e"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="leading" secondItem="GDr-KA-cEf" secondAttribute="leading" id="oc7-cM-r5X"/>
-                <constraint firstItem="ZPu-zj-l0S" firstAttribute="top" secondItem="51P-ff-VVh" secondAttribute="bottom" constant="8" id="pS9-uc-pCK"/>
-                <constraint firstItem="sTL-IC-bDP" firstAttribute="top" secondItem="FPt-Ir-bxD" secondAttribute="bottom" constant="12" id="s3d-gI-ELO"/>
+                <constraint firstItem="ZPu-zj-l0S" firstAttribute="top" secondItem="51P-ff-VVh" secondAttribute="bottom" constant="12" id="pS9-uc-pCK"/>
+                <constraint firstItem="sTL-IC-bDP" firstAttribute="top" secondItem="FPt-Ir-bxD" secondAttribute="bottom" constant="20" id="s3d-gI-ELO"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="top" secondItem="GDr-KA-cEf" secondAttribute="top" id="yge-DT-sBa"/>
                 <constraint firstItem="51P-ff-VVh" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="yua-5m-n75"/>
                 <constraint firstItem="51P-ff-VVh" firstAttribute="centerY" secondItem="fzY-xW-mCv" secondAttribute="bottom" id="yvl-ag-bJw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="831.88405797101461" y="-287.94642857142856"/>
+            <point key="canvasLocation" x="831.88405797101461" y="-292.29910714285711"/>
         </view>
     </objects>
     <resources>

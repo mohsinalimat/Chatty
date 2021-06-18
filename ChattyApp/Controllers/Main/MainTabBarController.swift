@@ -15,8 +15,8 @@ class MainTabBarController: UITabBarController {
         // Configure tabbar appearance
         let appearance = tabBar.standardAppearance
         appearance.backgroundColor = .white
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.secondaryLabel]
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor(named: "PrimaryThemeColor") ?? .blue]
         self.tabBar.standardAppearance = appearance
         
         
@@ -24,11 +24,11 @@ class MainTabBarController: UITabBarController {
         self.tabBar.layer.borderWidth = 0.2
         self.tabBar.layer.borderColor = UIColor.separator.cgColor
         
-        let unselectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: .black)
-        let selectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: #colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1))
+        let unselectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: .darkGray)
+        let selectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: UIColor(named: "PrimaryThemeColor") ?? .blue)
         
         let inboxNavigationController = InboxNavigationController()
-        inboxNavigationController.tabBarItem = UITabBarItem(title: nil,
+        inboxNavigationController.tabBarItem = UITabBarItem(title: "Chats",
                                                             image: UIImage(systemName: "bubble.left.and.bubble.right.fill")?
                                                                 .withConfiguration(unselectedConfiguration),
                                                             selectedImage: UIImage(systemName: "bubble.left.and.bubble.right.fill")?
@@ -37,7 +37,7 @@ class MainTabBarController: UITabBarController {
         
         
         let profileNavigationController = ProfileNavigationController()
-        profileNavigationController.tabBarItem = UITabBarItem(title: nil,
+        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile",
                                                               image: UIImage(systemName: "person.fill")?
                                                                 .withConfiguration(unselectedConfiguration),
                                                               selectedImage: UIImage(systemName: "person.fill")?

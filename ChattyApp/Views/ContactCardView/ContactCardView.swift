@@ -83,8 +83,8 @@ class ContactCardView: UIView {
     private func configure() {
         self.addNibViewToContentView()
         
-        self.backgroundImageContainerView.layer.cornerRadius = 20
-        self.backgroundImageContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//        self.backgroundImageContainerView.layer.cornerRadius = 20
+//        self.backgroundImageContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         self.editLabel.addShadow(shadowRadius: 1, shadowOpacity: 1, shadowColor: UIColor.separator.cgColor, shadowOffset: .zero)
         
