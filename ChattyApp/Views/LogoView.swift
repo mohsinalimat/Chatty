@@ -69,8 +69,8 @@ class LogoView: UIView {
     private func set(_ text: String?, withFontOfSize fontSize: CGFloat) -> NSMutableAttributedString {
         let font = UIFont.systemFont(ofSize: fontSize, weight: .black)
         return NSMutableAttributedString()
-            .append(text ?? "Chatty", withFont: font, withColor: #colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1))
-            .append(".", withFont: font, withColor: #colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1))
+            .append(text ?? "Chatty", withFont: font, withColor: UIColor(named: "SecondaryThemeColor")!)
+            .append(".", withFont: font, withColor: UIColor(named: "PrimaryThemeColor")!)
     }
     
 }

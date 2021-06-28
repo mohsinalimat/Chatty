@@ -9,41 +9,35 @@ import UIKit
 import PhotosUI
 import AVFoundation
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UITableViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    
-    internal var setImageOfType: UserImageType = .profile
-    
-    convenience init() {
-        self.init(nibName: String(describing: ProfileViewController.self), bundle: nil)
-    }
+    internal var setImageOfType: UserImageType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         self.tableView.alwaysBounceVertical = true
         self.tableView.contentSize = CGSize(width: self.tableView.frame.size.width,
                                             height: self.tableView.contentSize.height)
-        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
         
-        self.updateTableViewHeader()
-        
-        (self.tableView.tableHeaderView as? ProfileHeaderView)?.profileImageTapped = {
-            self.setImageOfType = .profile
-            self.presentPHPickerViewController()
-        }
-
-        (self.tableView.tableHeaderView as? ProfileHeaderView)?.coverImageTapped = {
-            self.setImageOfType = .cover
-            self.presentPHPickerViewController()
-        }
+        self.updateUI()
         
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.updateUI()
+    }
 
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.tableView.reloadData()
+    }
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.makeDynamicHeaderView()
@@ -76,6 +70,21 @@ class ProfileViewController: UIViewController {
     }
     
     
+    private func updateUI() {
+        self.updateTableViewHeader()
+        
+        (self.tableView.tableHeaderView as? ProfileHeaderView)?.profileImageTapped = {
+            self.setImageOfType = .profile
+            self.presentPHPickerViewController()
+        }
+
+        (self.tableView.tableHeaderView as? ProfileHeaderView)?.coverImageTapped = {
+            self.setImageOfType = .cover
+            self.presentPHPickerViewController()
+        }
+    }
+    
+    
     internal func updateTableViewHeader() {
         guard let userID = CurrentUser.uid else {
             (self.tableView.tableHeaderView as? ProfileHeaderView)?.displayData(for: nil)
@@ -83,47 +92,47 @@ class ProfileViewController: UIViewController {
         }
         
         UserStore.firstObject(where: { $0.userID == userID }) { realmUser, error in
+            self.navigationItem.title = (realmUser?.username == nil) ? "Profile" : realmUser?.username!
             (self.tableView.tableHeaderView as? ProfileHeaderView)?.displayData(for: realmUser)
         }
     }
+
     
-}
+    // MARK: - Table view data source
+    
 
-
-// MARK: - Table view data source
-
-
-extension ProfileViewController: UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return Settings.sections.count
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Settings.sections[section].rows.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return Settings.sections[section].title
     }
     
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return Settings.sections[section].footer
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "SettingsCell")
         let item = Settings.sections[indexPath.section].rows[indexPath.row]
         
+        cell.backgroundColor = .systemBackground
+        cell.backgroundConfiguration = UIBackgroundConfiguration.listAccompaniedSidebarCell()
+
         cell.accessoryType = item.accessoryType
-        cell.tintColor = UIColor(named: "PrimaryThemeColor") ?? .secondaryLabel
-        
+        cell.tintColor = .label
+
         cell.imageView?.image = UIImage(systemName: item.systemImageName ?? "")?
             .withConfiguration(UIImage.SymbolConfiguration(scale: .large))
-        
+
         cell.textLabel?.text = item.title
-//        cell.textLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
 
         cell.detailTextLabel?.numberOfLines = 5
         cell.detailTextLabel?.text = item.description
@@ -132,15 +141,20 @@ extension ProfileViewController: UITableViewDataSource {
         return cell
     }
     
-}
-
-
-
-extension ProfileViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
+    // MARK: - Table view delegate
+    
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = Settings.sections[indexPath.section].rows[indexPath.row]
+        item.performAction?()
+        if let viewController = item.associatedViewController {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    @IBAction func rightBarItemPressed(_ sender: Any) {
+        self.present(QRCodeViewController(), animated: true, completion: nil)
     }
     
 }

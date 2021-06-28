@@ -135,8 +135,8 @@ class LogInViewController: UIViewController {
     private func formatHeaderLabel() {
         let font: UIFont = .systemFont(ofSize: 32, weight: .black)
         self.primaryLabel.attributedText = NSMutableAttributedString()
-            .append("Welcome Back", withFont: font, withColor: #colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1))
-            .append(".", withFont: font, withColor: #colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1))
+            .append("Welcome Back", withFont: font, withColor: UIColor(named: "SecondaryThemeColor")!)
+            .append(".", withFont: font, withColor: UIColor(named: "PrimaryThemeColor")!)
     }
     
     

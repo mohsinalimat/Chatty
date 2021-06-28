@@ -9,6 +9,7 @@ import RealmSwift
 
 class UserStore: Object {
     
+    @objc dynamic var bio: String?
     @objc dynamic var userID: String?
     @objc dynamic var firstName: String?
     @objc dynamic var lastName: String?

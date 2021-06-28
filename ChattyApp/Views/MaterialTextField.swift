@@ -107,14 +107,14 @@ class MaterialTextField: UIView {
         self.layoutIfNeeded()
         
         self.backgroundColor = .clear
-        self.textField.setOutlineColor(#colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1), for: .normal)
-        self.textField.setOutlineColor(#colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1), for: .editing)
-        self.textField.setTextColor(#colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1), for: .editing)
-        self.textField.setNormalLabelColor(#colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1), for: .normal)
-        self.textField.setFloatingLabelColor(#colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1), for: .normal)
-        self.textField.setFloatingLabelColor(#colorLiteral(red: 0.2193171084, green: 0.4901946187, blue: 1, alpha: 1), for: .editing)
-        self.textField.setLeadingAssistiveLabelColor(#colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1), for: .normal)
-        self.textField.setLeadingAssistiveLabelColor(#colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1), for: .editing)
+        self.textField.setOutlineColor(UIColor(named: "SecondaryThemeColor")!, for: .normal)
+        self.textField.setOutlineColor(UIColor(named: "PrimaryThemeColor")!, for: .editing)
+        self.textField.setTextColor(UIColor(named: "SecondaryThemeColor")!, for: .editing)
+        self.textField.setNormalLabelColor(UIColor(named: "SecondaryThemeColor")!, for: .normal)
+        self.textField.setFloatingLabelColor(UIColor(named: "SecondaryThemeColor")!, for: .normal)
+        self.textField.setFloatingLabelColor(UIColor(named: "PrimaryThemeColor")!, for: .editing)
+        self.textField.setLeadingAssistiveLabelColor(UIColor(named: "SecondaryThemeColor")!, for: .normal)
+        self.textField.setLeadingAssistiveLabelColor(UIColor(named: "SecondaryThemeColor")!, for: .editing)
     }
 
 }

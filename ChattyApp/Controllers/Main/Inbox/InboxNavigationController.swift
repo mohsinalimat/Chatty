@@ -13,6 +13,7 @@ class InboxNavigationController: UINavigationController {
         super.viewDidLoad()
 
         self.navigationBar.prefersLargeTitles = true
+        self.navigationBar.tintColor = UIColor(named: "PrimaryThemeColor")
         
         let viewController = InboxViewController()
         self.viewControllers = [viewController]

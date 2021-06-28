@@ -7,22 +7,14 @@
 
 import UIKit
 
+@IBDesignable
 class ProfileNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.isNavigationBarHidden = true
         
-        let viewController = ProfileViewController()
-        self.viewControllers = [viewController]
-        
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.backgroundColor = .systemBackground
         
     }
     
-
-
 }

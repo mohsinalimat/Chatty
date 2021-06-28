@@ -67,11 +67,13 @@ class ContactCardView: UIView {
             
             self.primaryLabel.text = first + " " + last
             self.secondaryLabel.text = "@" + username
+            self.tertiaryLabel.text = user?.bio
             
         } else {
             
             self.primaryLabel.text = "N/A"
             self.secondaryLabel.text = "N/A"
+            self.tertiaryLabel.text = nil
             
         }
         
@@ -86,7 +88,7 @@ class ContactCardView: UIView {
 //        self.backgroundImageContainerView.layer.cornerRadius = 20
 //        self.backgroundImageContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        self.editLabel.addShadow(shadowRadius: 1, shadowOpacity: 1, shadowColor: UIColor.separator.cgColor, shadowOffset: .zero)
+        self.editLabel.addShadow(shadowRadius: 1, shadowOpacity: 1, shadowColor: UIColor.black.cgColor, shadowOffset: .zero)
         
         self.contactActionView.moreButtonAction = ({ self.moreButtonAction?($0) })
         self.contactActionView.phoneButtonAction = ({ self.phoneButtonAction?($0) })

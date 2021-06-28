@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fxq-oS-uKg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="G7P-jn-gPF">
+            <objects>
+                <tableViewController id="Ddi-iJ-HXz" customClass="ProfileViewController" customModule="ChattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="G05-hv-8Pa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jZm-Ss-Az7" customClass="ProfileHeaderView" customModule="ChattyApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="533"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="Ddi-iJ-HXz" id="dih-s1-old"/>
+                            <outlet property="delegate" destination="Ddi-iJ-HXz" id="Zpn-0q-X4V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Profile" id="CMy-KP-aaP">
+                        <barButtonItem key="leftBarButtonItem" id="IwC-gf-GPW">
+                            <imageReference key="image" image="plus.viewfinder" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                <hierarchicalColors>
+                                    <color name="PrimaryThemeColor"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="OBu-rD-jKu">
+                            <imageReference key="image" image="qrcode" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                <hierarchicalColors>
+                                    <color name="PrimaryThemeColor"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <color key="tintColor" name="PrimaryThemeColor"/>
+                            <connections>
+                                <action selector="rightBarItemPressed:" destination="Ddi-iJ-HXz" id="gBv-ZO-pZa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wa-v5-a1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.86956521739137" y="49.553571428571423"/>
+        </scene>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="TFp-HY-BUF">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fxq-oS-uKg" customClass="ProfileNavigationController" customModule="ChattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tiR-qx-WyX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="PrimaryThemeColor"/>
+                        <color key="barTintColor" name="PrimaryThemeColor"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ddi-iJ-HXz" kind="relationship" relationship="rootViewController" id="8Lc-ji-SMI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeW-PB-Rb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <namedColor name="PrimaryThemeColor">
+            <color red="0.29100000858306885" green="0.48399999737739563" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

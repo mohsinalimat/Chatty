@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.5"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +24,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="GDr-KA-cEf">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="543"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="546"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzY-xW-mCv">
@@ -51,7 +51,7 @@
                                 <constraint firstAttribute="height" constant="30" id="8wa-OZ-3Eq"/>
                                 <constraint firstAttribute="width" constant="100" id="exo-Q0-KbY"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -113,7 +113,7 @@
                                 <constraint firstAttribute="width" secondItem="Y9u-de-OHt" secondAttribute="height" multiplier="1:1" id="d28-Cd-UY4"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal">
                                 <imageReference key="image" image="camera.on.rectangle.fill" catalog="system" renderingMode="hierarchical-single">
                                     <hierarchicalColors>
@@ -146,7 +146,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="kvz-R3-nGy" secondAttribute="height" multiplier="1:1" id="4ze-f9-whG"/>
                         <constraint firstAttribute="height" constant="45" id="Aaw-4X-4oa"/>
@@ -159,25 +159,25 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[DISPLAY_NAME]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPu-zj-l0S">
-                    <rect key="frame" x="0.0" y="302" width="414" height="33.5"/>
+                    <rect key="frame" x="12" y="302" width="390" height="33.5"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@[USERNAME]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBj-4C-ssI">
-                    <rect key="frame" x="0.0" y="337.5" width="414" height="24"/>
+                    <rect key="frame" x="12" y="337.5" width="390" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passionate developer with a love for coding and an interest in developing the technologies of tomorrow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-Ir-bxD">
-                    <rect key="frame" x="15" y="373.5" width="384" height="61"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[BIO]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-Ir-bxD">
+                    <rect key="frame" x="12" y="369.5" width="390" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" systemColor="secondaryLabelColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-IC-bDP" customClass="ContactActionView" customModule="ChattyApp" customModuleProvider="target">
-                    <rect key="frame" x="62" y="454.5" width="290" height="50"/>
+                    <rect key="frame" x="62" y="411" width="290" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="makeCircleCorners" value="NO"/>
@@ -194,9 +194,9 @@
                 <constraint firstItem="oBj-4C-ssI" firstAttribute="top" secondItem="ZPu-zj-l0S" secondAttribute="bottom" constant="2" id="C8Q-IS-n3b"/>
                 <constraint firstItem="FPt-Ir-bxD" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="Duk-qU-Ie0"/>
                 <constraint firstItem="oBj-4C-ssI" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="FK9-Xp-y4k"/>
-                <constraint firstItem="FPt-Ir-bxD" firstAttribute="leading" secondItem="ZPu-zj-l0S" secondAttribute="leading" constant="15" id="GOW-Jc-edp"/>
-                <constraint firstItem="FPt-Ir-bxD" firstAttribute="top" secondItem="oBj-4C-ssI" secondAttribute="bottom" constant="12" id="OCW-al-kKM"/>
-                <constraint firstItem="ZPu-zj-l0S" firstAttribute="leading" secondItem="fzY-xW-mCv" secondAttribute="leading" id="QK8-ef-WA7"/>
+                <constraint firstItem="FPt-Ir-bxD" firstAttribute="leading" secondItem="ZPu-zj-l0S" secondAttribute="leading" id="GOW-Jc-edp"/>
+                <constraint firstItem="FPt-Ir-bxD" firstAttribute="top" secondItem="oBj-4C-ssI" secondAttribute="bottom" constant="8" id="OCW-al-kKM"/>
+                <constraint firstItem="ZPu-zj-l0S" firstAttribute="leading" secondItem="fzY-xW-mCv" secondAttribute="leading" constant="12" id="QK8-ef-WA7"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="top" secondItem="GDr-KA-cEf" secondAttribute="top" id="e2o-QF-VTX"/>
                 <constraint firstItem="fzY-xW-mCv" firstAttribute="centerX" secondItem="GDr-KA-cEf" secondAttribute="centerX" id="fgM-If-MQX"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sTL-IC-bDP" secondAttribute="bottom" id="hwa-Z4-Qqh"/>
@@ -211,7 +211,7 @@
                 <constraint firstItem="51P-ff-VVh" firstAttribute="centerY" secondItem="fzY-xW-mCv" secondAttribute="bottom" id="yvl-ag-bJw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="831.88405797101461" y="-292.29910714285711"/>
+            <point key="canvasLocation" x="831.88405797101461" y="-291.29464285714283"/>
         </view>
     </objects>
     <resources>

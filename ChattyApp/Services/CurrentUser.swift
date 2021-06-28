@@ -97,6 +97,7 @@ class CurrentUser: NSObject {
             }
             
             let user = UserStore()
+            user.bio = snapshot.data()?[User.DataTypes.bio.rawValue] as? String
             user.userID = snapshot.data()?[User.DataTypes.userID.rawValue] as? String
             user.username = snapshot.data()?[User.DataTypes.username.rawValue] as? String
             user.firstName = snapshot.data()?[User.DataTypes.firstName.rawValue] as? String

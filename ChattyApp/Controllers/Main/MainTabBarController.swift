@@ -11,18 +11,18 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.isTranslucent = false
+        self.tabBar.backgroundColor = .systemBackground
 
         // Configure tabbar appearance
         let appearance = tabBar.standardAppearance
-        appearance.backgroundColor = .white
+        appearance.backgroundColor = .systemBackground
+        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.secondaryLabel
+        appearance.stackedLayoutAppearance.selected.iconColor = UIColor(named: "PrimaryThemeColor") ?? .blue
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.secondaryLabel]
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor(named: "PrimaryThemeColor") ?? .blue]
         self.tabBar.standardAppearance = appearance
-        
-        
-        self.tabBar.clipsToBounds = true
-        self.tabBar.layer.borderWidth = 0.2
-        self.tabBar.layer.borderColor = UIColor.separator.cgColor
         
         let unselectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: .darkGray)
         let selectedConfiguration = UIImage.SymbolConfiguration(hierarchicalColor: UIColor(named: "PrimaryThemeColor") ?? .blue)
@@ -36,7 +36,8 @@ class MainTabBarController: UITabBarController {
         )
         
         
-        let profileNavigationController = ProfileNavigationController()
+        let profileNavigationController = UIStoryboard(name: "Profile", bundle: nil)
+            .instantiateViewController(withIdentifier: String(describing: ProfileNavigationController.self))
         profileNavigationController.tabBarItem = UITabBarItem(title: "Profile",
                                                               image: UIImage(systemName: "person.fill")?
                                                                 .withConfiguration(unselectedConfiguration),

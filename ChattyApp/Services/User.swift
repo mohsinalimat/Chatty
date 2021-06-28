@@ -10,8 +10,8 @@ import Firebase
 
 class User: NSObject {
     
-    
     enum DataTypes: String {
+        case bio = "bio"
         case userID = "_userID"
         case created = "created"
         case username = "username"

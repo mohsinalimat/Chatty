@@ -59,6 +59,7 @@ class VerifyViewController: UIViewController {
             self.secondaryLabel.attributedText = NSMutableAttributedString()
                 .append("We sent a six digit code to\n", withFont: .systemFont(ofSize: 18))
                 .append(phoneNumber, withFont: .systemFont(ofSize: 18, weight: .semibold))
+            self.secondaryLabel.textColor = UIColor(named: "SecondaryThemeColor")
         }
         
         self.textField.textField.keyboardType = .numberPad
@@ -178,8 +179,8 @@ class VerifyViewController: UIViewController {
     private func formatHeaderLabel() {
         let font: UIFont = .systemFont(ofSize: 34, weight: .black)
         self.primaryLabel.attributedText = NSMutableAttributedString()
-            .append("Verify", withFont: font, withColor: #colorLiteral(red: 0.1351798475, green: 0.2047304213, blue: 0.2642407119, alpha: 1))
-            .append(".", withFont: font, withColor: #colorLiteral(red: 0.218554914, green: 0.4906672239, blue: 1, alpha: 1))
+            .append("Verify", withFont: font, withColor: UIColor(named: "SecondaryThemeColor")!)
+            .append(".", withFont: font, withColor: UIColor(named: "PrimaryThemeColor")!)
     }
 
     
