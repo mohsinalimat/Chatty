@@ -12,6 +12,7 @@ class QRCodeViewController: UIViewController {
     @IBOutlet weak var primaryLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var containerView: UIView!
     
     var initialBrightness: CGFloat!
     
@@ -26,12 +27,13 @@ class QRCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.imageView.image = self.createQRCode(withURLString: "https://github.com/krisrjack")
+        self.imageView.image = self.createQRCode(withURLString: "https://github.com/krisrjack?uid=\(CurrentUser.uid ?? "NULL")")
         
-        self.imageView.addShadow(shadowRadius: 3,
-                                 shadowOpacity: 1,
-                                 shadowColor: UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.2).cgColor,
-                                 shadowOffset: CGSize(width: 0, height: 5))
+        self.containerView.layer.cornerRadius = 12
+        self.containerView.addShadow(shadowRadius: 3,
+                                     shadowOpacity: 3,
+                                     shadowColor: UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.2).cgColor,
+                                     shadowOffset: CGSize(width: 0, height: 5))
         
         guard let userID = CurrentUser.uid else {
             self.primaryLabel.text = "N/A"
@@ -64,24 +66,20 @@ class QRCodeViewController: UIViewController {
     }
     
     private func createQRCode(withURLString string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
-        qrFilter.setValue(data, forKey: "inputMessage")
-        guard let qrImage = qrFilter.outputImage else { return nil }
-        
-        let transform = CGAffineTransform(scaleX: 10, y: 10)
-        let scaledQrImage = qrImage.transformed(by: transform)
+        let data = string.data(using: .ascii)
 
-        guard let colorInvertFilter = CIFilter(name: "CIColorInvert") else { return nil }
-        colorInvertFilter.setValue(scaledQrImage, forKey: "inputImage")
-        guard let outputInvertedImage = colorInvertFilter.outputImage else { return nil }
-  
-        guard let maskToAlphaFilter = CIFilter(name: "CIMaskToAlpha") else { return nil}
-        maskToAlphaFilter.setValue(outputInvertedImage, forKey: "inputImage")
-        guard let outputCIImage = maskToAlphaFilter.outputImage else { return nil }
-        
-        let context = CIContext()
-        guard let cgImage = context.createCGImage(outputCIImage, from: outputCIImage.extent) else { return nil }
-        return UIImage(cgImage: cgImage)
+        guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+        filter.setValue(data, forKey: "inputMessage")
+
+        let transform = CGAffineTransform(scaleX: 7.2, y: 7.2)
+        guard let output = filter.outputImage?.transformed(by: transform) else { return nil }
+
+        let colorParameters = [
+            "inputColor0": CIColor(color: UIColor(named: "PrimaryThemeColor")!), // Foreground
+            "inputColor1": CIColor(color: UIColor.clear) // Background
+        ]
+        let colored = output.applyingFilter("CIFalseColor", parameters: colorParameters)
+
+        return UIImage(ciImage: colored)
     }
 }

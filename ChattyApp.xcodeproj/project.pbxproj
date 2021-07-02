@@ -25,6 +25,11 @@
 		186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4ACB265ADB1F0046389B /* SecondaryMessageBubble.swift */; };
 		186D4ACE265ADB1F0046389B /* SecondaryMessageBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186D4ACC265ADB1F0046389B /* SecondaryMessageBubble.xib */; };
 		186D4AD2265B1B5F0046389B /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D4AD1265B1B5F0046389B /* MaterialTextField.swift */; };
+		1873D7B6268A60340090367C /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873D7B5268A60340090367C /* Search.swift */; };
+		1873D7B8268A60BD0090367C /* Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873D7B7268A60BD0090367C /* Algolia.swift */; };
+		1873D7BA268A94950090367C /* PrivateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873D7B9268A94950090367C /* PrivateAccountViewController.swift */; };
+		1873D7BE268B69870090367C /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873D7BC268B69870090367C /* ComposeViewController.swift */; };
+		1873D7BF268B69870090367C /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1873D7BD268B69870090367C /* ComposeViewController.xib */; };
 		1885DCD0265865C40054133B /* InboxNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCCF265865C40054133B /* InboxNavigationController.swift */; };
 		1885DCD22658750D0054133B /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCD12658750D0054133B /* ProfileNavigationController.swift */; };
 		1885DCD5265878540054133B /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCD3265878540054133B /* InboxViewController.swift */; };
@@ -32,6 +37,8 @@
 		1885DCE12658A8520054133B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1885DCE02658A8520054133B /* GoogleService-Info.plist */; };
 		1885DCE32658AA1C0054133B /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885DCE22658AA1C0054133B /* Authenticator.swift */; };
 		18865C42267527C600F49E2C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18865C41267527C600F49E2C /* UIImageView.swift */; };
+		189029A2268F949B00B847D9 /* UserResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189029A0268F949B00B847D9 /* UserResultCell.swift */; };
+		189029A3268F949B00B847D9 /* UserResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189029A1268F949B00B847D9 /* UserResultCell.xib */; };
 		18932DD9265D92EA005CE615 /* VerifyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932DD8265D92EA005CE615 /* VerifyTextField.swift */; };
 		18932DDB265DB115005CE615 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932DDA265DB115005CE615 /* User.swift */; };
 		18932DDD265DB5BF005CE615 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18932DDC265DB5BF005CE615 /* Dictionary.swift */; };
@@ -128,6 +135,11 @@
 		186D4ACB265ADB1F0046389B /* SecondaryMessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryMessageBubble.swift; sourceTree = "<group>"; };
 		186D4ACC265ADB1F0046389B /* SecondaryMessageBubble.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryMessageBubble.xib; sourceTree = "<group>"; };
 		186D4AD1265B1B5F0046389B /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		1873D7B5268A60340090367C /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		1873D7B7268A60BD0090367C /* Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algolia.swift; sourceTree = "<group>"; };
+		1873D7B9268A94950090367C /* PrivateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateAccountViewController.swift; sourceTree = "<group>"; };
+		1873D7BC268B69870090367C /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		1873D7BD268B69870090367C /* ComposeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
 		1885DCCF265865C40054133B /* InboxNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxNavigationController.swift; sourceTree = "<group>"; };
 		1885DCD12658750D0054133B /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		1885DCD3265878540054133B /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +147,8 @@
 		1885DCE02658A8520054133B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1885DCE22658AA1C0054133B /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		18865C41267527C600F49E2C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		189029A0268F949B00B847D9 /* UserResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultCell.swift; sourceTree = "<group>"; };
+		189029A1268F949B00B847D9 /* UserResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserResultCell.xib; sourceTree = "<group>"; };
 		18932DD8265D92EA005CE615 /* VerifyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTextField.swift; sourceTree = "<group>"; };
 		18932DDA265DB115005CE615 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		18932DDC265DB5BF005CE615 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -329,6 +343,15 @@
 			path = SecondaryMessageBubble;
 			sourceTree = "<group>";
 		};
+		1873D7BB268B691F0090367C /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				1873D7BD268B69870090367C /* ComposeViewController.xib */,
+				1873D7BC268B69870090367C /* ComposeViewController.swift */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
 		1885DCC226585FE20054133B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				18932DDA265DB115005CE615 /* User.swift */,
+				1873D7B5268A60340090367C /* Search.swift */,
 				1860EA1B265F531A00DC69A9 /* Username.swift */,
 				18932DE6265DC728005CE615 /* CurrentUser.swift */,
 				1885DCE22658AA1C0054133B /* Authenticator.swift */,
@@ -371,6 +395,7 @@
 				18D20AAE266570290075C672 /* MainTabBarController.swift */,
 				1885DCC92658652A0054133B /* Inbox */,
 				1885DCCC2658654B0054133B /* Profile */,
+				1873D7BB268B691F0090367C /* Compose */,
 				18D0AF9526826F7500E5EA57 /* Settings */,
 			);
 			path = Main;
@@ -420,6 +445,7 @@
 				18BA19BD265B37D300864082 /* PhoneTextField.swift */,
 				186D4AD1265B1B5F0046389B /* MaterialTextField.swift */,
 				18464AD1268171D300E99C41 /* MaterialTextView.swift */,
+				189029A4268F949E00B847D9 /* UserResultCell */,
 				18DEE33026777E13009C2F2D /* ContactActionView */,
 				18DEE32B26777A0E009C2F2D /* ContactCardView */,
 				18B2C8E3265A8D7F000850C0 /* MessageTextView */,
@@ -427,6 +453,15 @@
 				186D4AC6265AD60B0046389B /* SecondaryMessageBubble */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		189029A4268F949E00B847D9 /* UserResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				189029A1268F949B00B847D9 /* UserResultCell.xib */,
+				189029A0268F949B00B847D9 /* UserResultCell.swift */,
+			);
+			path = UserResultCell;
 			sourceTree = "<group>";
 		};
 		18982906265C553100A9422D /* Opening */ = {
@@ -441,6 +476,7 @@
 		18982912265C7C0B00A9422D /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
+				1873D7B7268A60BD0090367C /* Algolia.swift */,
 				18982910265C7BAD00A9422D /* AuthKey_5N82GZ3RN2.p8 */,
 			);
 			path = Secrets;
@@ -521,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				18D3185C268174C800FA0391 /* UpdateBioViewController.swift */,
+				1873D7B9268A94950090367C /* PrivateAccountViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -595,7 +632,7 @@
 				1836FECC26585492009055DD /* Sources */,
 				1836FECD26585492009055DD /* Frameworks */,
 				1836FECE26585492009055DD /* Resources */,
-				19861C9C7A44A6729E6AF341 /* [CP] Embed Pods Frameworks */,
+				F9F9CEC1CAA02A887613E4B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -633,7 +670,7 @@
 				1836FEED26585494009055DD /* Sources */,
 				1836FEEE26585494009055DD /* Frameworks */,
 				1836FEEF26585494009055DD /* Resources */,
-				736C7213AF2E65E59CCFED4D /* [CP] Embed Pods Frameworks */,
+				238DDF22160879C069EE093A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -709,7 +746,9 @@
 				18DEE32F26777A5B009C2F2D /* ContactCardView.xib in Resources */,
 				18982911265C7BAD00A9422D /* AuthKey_5N82GZ3RN2.p8 in Resources */,
 				18D20AB3266570960075C672 /* Main.storyboard in Resources */,
+				189029A3268F949B00B847D9 /* UserResultCell.xib in Resources */,
 				18F41E94265AAADD00041D1B /* MessageController.xib in Resources */,
+				1873D7BF268B69870090367C /* ComposeViewController.xib in Resources */,
 				18BDE75A265966DC00EB1726 /* SignUpViewController.xib in Resources */,
 				18982917265C832100A9422D /* VerifyViewController.xib in Resources */,
 				18BDE7562659663100EB1726 /* LogInViewController.xib in Resources */,
@@ -755,24 +794,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		19861C9C7A44A6729E6AF341 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChattyApp/Pods-ChattyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChattyApp/Pods-ChattyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChattyApp/Pods-ChattyApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		736C7213AF2E65E59CCFED4D /* [CP] Embed Pods Frameworks */ = {
+		238DDF22160879C069EE093A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -833,6 +855,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F9F9CEC1CAA02A887613E4B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChattyApp/Pods-ChattyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChattyApp/Pods-ChattyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChattyApp/Pods-ChattyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -850,9 +889,12 @@
 				186D4AC4265AAD930046389B /* Window.swift in Sources */,
 				18932DDB265DB115005CE615 /* User.swift in Sources */,
 				18DEE32D26777A46009C2F2D /* ContactCardView.swift in Sources */,
+				1873D7BA268A94950090367C /* PrivateAccountViewController.swift in Sources */,
 				18B2C8E7265A8D99000850C0 /* MessageTextView.swift in Sources */,
 				18BA19C0265B39DC00864082 /* Vibrations.swift in Sources */,
+				189029A2268F949B00B847D9 /* UserResultCell.swift in Sources */,
 				186D4AC9265AD6770046389B /* PrimaryMessageBubble.swift in Sources */,
+				1873D7B6268A60340090367C /* Search.swift in Sources */,
 				18BDE7522659443700EB1726 /* NSMutableAttributedString.swift in Sources */,
 				18BDE750265940FD00EB1726 /* UIColor.swift in Sources */,
 				1898290D265C5B4200A9422D /* OpeningViewController.swift in Sources */,
@@ -860,6 +902,7 @@
 				189A1FEB266420D50016DA31 /* UserStore.swift in Sources */,
 				1885DCD5265878540054133B /* InboxViewController.swift in Sources */,
 				18F41E93265AAADD00041D1B /* MessageController.swift in Sources */,
+				1873D7B8268A60BD0090367C /* Algolia.swift in Sources */,
 				18BDE75E2659ED8300EB1726 /* LogoView.swift in Sources */,
 				18AFB8862659386B000FEE1A /* UIView.swift in Sources */,
 				18932DEB265DD36F005CE615 /* Strings.swift in Sources */,
@@ -882,6 +925,7 @@
 				1860EA19265EEE8D00DC69A9 /* GetNameViewController.swift in Sources */,
 				186D4AD2265B1B5F0046389B /* MaterialTextField.swift in Sources */,
 				18932DE7265DC728005CE615 /* CurrentUser.swift in Sources */,
+				1873D7BE268B69870090367C /* ComposeViewController.swift in Sources */,
 				18DEE33426777E53009C2F2D /* ContactActionView.swift in Sources */,
 				186D4ACD265ADB1F0046389B /* SecondaryMessageBubble.swift in Sources */,
 				18BDE7552659663100EB1726 /* LogInViewController.swift in Sources */,

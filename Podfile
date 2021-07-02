@@ -15,6 +15,8 @@ target 'ChattyApp' do
   target 'ChattyAppUITests' do
     # Pods for testing
   end
+  
+  pod 'SwiftyJSON'
 
   pod 'SDWebImage'
 

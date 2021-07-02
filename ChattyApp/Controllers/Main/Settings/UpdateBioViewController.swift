@@ -10,13 +10,13 @@ import UIKit
 class UpdateBioViewController: UIViewController {
     
     private var maxWordCount = 120
+    private var searchUser: Search.User!
     
     let textView: MaterialTextView = {
         let textView = MaterialTextView()
         textView.title = "Bio"
         textView.placeholder = "Add bio here..."
         textView.subText = "Add a short summary about yourself that will appear publicly in your profile."
-        textView.trailingSubText = "0/100"
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
@@ -66,7 +66,20 @@ class UpdateBioViewController: UIViewController {
         }
 
         UserStore.firstObject(where: { $0.userID == userID }) { realmUser, error in
+            
+            self.searchUser = Search.User(
+                bio: realmUser?.bio,
+                userID: realmUser?.userID,
+                firstName: realmUser?.firstName,
+                lastName: realmUser?.lastName,
+                username: realmUser?.username,
+                phoneNumber: realmUser?.phoneNumber,
+                profilePicture: realmUser?.profilePicture
+            )
+            
+            
             self.textView.text = realmUser?.bio
+            self.textView.trailingSubText = "\(realmUser?.bio?.count ?? 0)/\(self.maxWordCount)"
         }
     }
     
@@ -93,7 +106,12 @@ class UpdateBioViewController: UIViewController {
             if let error = error {
                 self.presentError(withMessage: error.localizedDescription)
             } else {
-                self.navigationController?.popViewController(animated: true)
+                self.searchUser.bio = text
+                Search.add(user: self.searchUser) { response, error in
+                    DispatchQueue.main.async {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
             }
             
         }

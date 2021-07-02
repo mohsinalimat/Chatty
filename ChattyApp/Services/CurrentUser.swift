@@ -108,6 +108,8 @@ class CurrentUser: NSObject {
             user.created = (snapshot.data()?[User.DataTypes.created.rawValue] as? Timestamp)?.dateValue()
             user.dateOfBirth = (snapshot.data()?[User.DataTypes.dateOfBirth.rawValue] as? Timestamp)?.dateValue()
             
+            user.isPrivate = snapshot.data()?[User.DataTypes.isPrivate.rawValue] as? Bool ?? true
+            
             user.store { error in
                 completion(error)
             }

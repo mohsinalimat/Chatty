@@ -47,7 +47,7 @@ class Settings: NSObject {
                     
                     Row(title: "Brief Bio",
                         description: "Add a short summary about yourself that will appear publicly in your profile.",
-                        systemImageName: "person.text.rectangle",
+                        systemImageName: "heart.text.square",
                         associatedViewController: UpdateBioViewController()),
                     
                     Row(title: "Phone Number",
@@ -65,9 +65,14 @@ class Settings: NSObject {
                 
                 Section(title: "Privacy", rows: [
                     
+                    Row(title: "Private Account",
+                        description: "Disabling will give others the ability to discover your profile.",
+                        systemImageName: "lock",
+                        associatedViewController: PrivateAccountViewController()),
+                    
                     Row(title: "Blocked",
                         description: "View and edit accounts that you have blocked. Blocked users will be unable to view and interact with your account.",
-                        systemImageName: "person.crop.circle.badge.xmark"),
+                        systemImageName: "nosign"),
                     
                 ]),
                 

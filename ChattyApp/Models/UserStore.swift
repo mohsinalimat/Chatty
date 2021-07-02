@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-class UserStore: Object {
+class UserStore: Object, Encodable {
     
     @objc dynamic var bio: String?
     @objc dynamic var userID: String?
@@ -20,6 +20,8 @@ class UserStore: Object {
     
     @objc dynamic var created: Date?
     @objc dynamic var dateOfBirth: Date?
+    
+    @objc dynamic var isPrivate: Bool = true
     
     
     override static func primaryKey() -> String? {

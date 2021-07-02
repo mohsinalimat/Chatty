@@ -24,6 +24,8 @@ class InboxViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "Chats"
+        self.navigationItem.largeTitleDisplayMode = .always
+        
         self.view.backgroundColor = .systemBackground
         
         self.tableView.separatorStyle = .none
@@ -36,6 +38,6 @@ class InboxViewController: UITableViewController {
     }
     
     @objc private func composeTapped() {
-        
+        self.navigationController?.pushViewController(ComposeViewController(), animated: true)
     }
 }

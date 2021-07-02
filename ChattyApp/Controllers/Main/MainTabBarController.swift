@@ -39,9 +39,9 @@ class MainTabBarController: UITabBarController {
         let profileNavigationController = UIStoryboard(name: "Profile", bundle: nil)
             .instantiateViewController(withIdentifier: String(describing: ProfileNavigationController.self))
         profileNavigationController.tabBarItem = UITabBarItem(title: "Profile",
-                                                              image: UIImage(systemName: "person.fill")?
+                                                              image: UIImage(named: "custom.person.fill")?
                                                                 .withConfiguration(unselectedConfiguration),
-                                                              selectedImage: UIImage(systemName: "person.fill")?
+                                                              selectedImage: UIImage(named: "custom.person.fill")?
                                                                 .withConfiguration(selectedConfiguration)
         )
         

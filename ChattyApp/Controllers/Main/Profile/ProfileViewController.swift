@@ -132,7 +132,7 @@ class ProfileViewController: UITableViewController {
             .withConfiguration(UIImage.SymbolConfiguration(scale: .large))
 
         cell.textLabel?.text = item.title
-        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+//        cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
 
         cell.detailTextLabel?.numberOfLines = 5
         cell.detailTextLabel?.text = item.description

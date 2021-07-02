@@ -16,6 +16,7 @@ class User: NSObject {
         case created = "created"
         case username = "username"
         case lastName = "lastName"
+        case isPrivate = "isPrivate"
         case firstName = "firstName"
         case dateOfBirth = "dateOfBirth"
         case phoneNumber = "phoneNumber"

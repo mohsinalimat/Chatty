@@ -22,6 +22,8 @@
 
  *********************/
 
+"INVALID_USER_OPERATION" = "The operation requested requires a user to be performed.";
+
 "INVALID_CURRENT_USER_OPERATION" = "The operation requested requires a signed in user to be performed.";
 
 "EMPTY_FIELD_ERROR" = "All fields are required.";

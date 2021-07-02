@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import FirebaseUI
-import SwiftUI
+import FirebaseStorageUI
 
 extension UIImageView {
     
